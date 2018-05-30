@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width">
+	<title>themeticus timeline</title>
+	<link rel="stylesheet" type="text/css" href="js/fullpage.js/dist/jquery.fullpage.css" />
+	<script src="js/jquery/dist/jquery.min.js"></script>
+	<script src="js/fullpage.js/vendors/jquery.easings.min.js"></script>
+	<script src="js/fullpage.js/vendors/scrolloverflow.min.js"></script>
+	<script src="js/fullpage.js/dist/jquery.fullpage.min.js"></script>	
+
+	<style>
+		@font-face {
+		  font-family: 'onelove';
+		  src:  url("fonts/1ove.ttf") format("ttf"), 
+		        url("fonts/1ove.woff") format("woff"); }
+		        body {
+		  margin: 0;
+		  font-family:  onelove, courier, arial, helvetica;
+		  color: #000;
+		}
+
+		strong, small, span, em, a {
+		  display: inline-block;
+		}
+
+		a {
+		  text-decoration: none;
+		  outline: none;
+		  color: orange; 
+		}
+
+		h1 {
+		  font-family: inherit;
+		  font-size: 3.4em;
+		  margin: 0 0 20px;
+		  font-weight: normal;
+		  color: #f5f5f5
+		}
+
+		.stint {
+			max-width: 65%;
+			padding: 0 20px
+		}
+
+		.insight {
+			font-size: 1.4em;
+		}
+
+		#myMenu {
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 999;
+			list-style: none;	
+		}
+
+		#myMenu ul {
+	    border-bottom: 1px solid #ccc;
+	    padding: 5px 10px;
+		}
+
+		#myMenu ul li {
+
+		}
+
+		@media only screen and (max-width: 400px) {
+		  .content {
+		    
+		  }
+		}  
+
+	</style>
+
+</head>
+<body>
+
+<ul id="myMenu">
+	<li data-menuanchor="one" class="active"><a href="#one">Front End Devloper @ Imagemakers</a></li>
+	<li data-menuanchor="two"><a href="#two">Lecturer @ CodeSpace</a></li>
+	<li data-menuanchor="three"><a href="#three">Front End Developer @ Unboxed</a></li>
+	<li data-menuanchor="four"><a href="#four">Freelance Developer @ Themeticus</a></li>
+</ul>	
+
+<div id="fullpage">
+
+	<div class="section">
+		<div class="stint">
+			<h1>Front End Developer</h1>
+			<p>January 2018 - June 2018</p>			
+			<p class="insight">A mixture of Custom Javascript and Wordpress Templates. The task was to simplify the User Interface &amp; hopefully having the knock on effect of improving the User Experience for their catalogue website. Built using Vue.js on the front-end, talking to a headless Wordpress CMS and wrapped inside of NUXT.js, for some baked-in SEO goodness. Using analytics and user feedback as a guide, we began prototyping fully functional layouts, forms, navigational elements &amp; menus as the starting point, once stress-tested and approved, the components were composed into templates and retrofitted with the overall visual strategy, mainly dictating color, font and visual arrangment. <a href="#">See a snapshot of my work.</a></p><br/>
+			<p>HTML, CSS, Javascript and friends</p>
+			<p><i>"Friendly &amp; Efficient"</i> - <b>Anton Spaun</b><br/>&nbsp;&nbsp;<small>CEO @Imagemakers</small></p>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="stint">
+			<h1>Lecturer</h1>
+			<p>June 2017 - December 2018</p>					
+			<p class="insight">The opportunity to shape young, tech-savvy minds is something that pays in bucketloads. When you stop selling the industry and start sharing insights, you get a chance to equip eager minds not only with skills for software development, but also the soft skills mising from many development environments across the planet. Contracted by CodeSpace and placed at Life Choices <a href="#">See a snapshot of my work.</a></p><br/>
+			<p>HTML, CSS, Javascript and friends<br/></p>
+			<p>
+				<i>"Positive &amp; Knowledgeable"</i> - <b>Stefan Louw</b><br/>&nbsp;&nbsp;<small>Founder @CodeSpace</small><br/>
+			</p>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="stint">
+			<h1>Front End Developer</h1>
+			<p>June 2016 - June 2017</p>
+			<p class="insight">Responsible for front end maintenance of <a href="https://onlineinvesting.sanlam.co.za/">Sanlam’s Online Investing portal</a>. Updating Style Guide(s) and providing <a href="https://bellryck.sanlam.co.za/">customisation</a> for the white-labelled version of their application. I also provided CSS &amp; JS support for <a href="https://www.augmento.ai/">Augmento</a>, running their own custom Ruby on Rails application. Unboxed Cape Town was a production house run out of the UK and officially closed its doors in June of 2017. <a href="#">See a snapshot of my work.</a></p><br/>
+			<p>HTML, CSS, Javascript and friends<br/></p>
+			<p>
+				<i>"Highly Adaptable"</i> - <b>Carlo Kruger</b><br/>&nbsp;&nbsp;<small>Development Manager @Unboxed</small><br/>
+			</p>
+		</div>
+	</div>
+
+	<div class="section">Some section</div>
+
+</div>
+
+<script>
+	$('#fullpage').fullpage({
+		anchors: ['one', 'two', 'three', 'four', 'five'],
+		menu: '#myMenu'
+	});
+</script>
+</body>
+</html>
