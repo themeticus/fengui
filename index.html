@@ -33,16 +33,21 @@
 		}
 
 		h1 {
-		  font-family: inherit;
-		  font-size: 3.4em;
-		  margin: 0 0 20px;
-		  font-weight: normal;
-		  color: black
+		    font-family: inherit;
+		    font-size: 1.4em;
+		    margin: 0 0 20px -20px;
+		    font-weight: normal;
+		    color: #fff;
+		    background: black;
+		    width: fit-content;
+		    padding: 10px 20px;
 		}
 
 		.stint {
 			max-width: 65%;
-			padding: 0 20px
+			padding: 0 20px;
+			position: absolute;
+			top: 10px;
 		}
 
 		.insight {
@@ -70,7 +75,8 @@
 		}
 
 		.active>a {
-			color: black !important;
+			color: white !important;
+			background-color: black;
 		}
 
 		@media only screen and (max-width: 400px) {
@@ -89,53 +95,60 @@
 <body>
 
 <ul id="myMenu">
-	<li data-menuanchor="n0"><a href="#n0"><span class="role">Front End Devloper </span>A Brief Bio</a></li>
-	<li><a href="">---</a></li>
-	<li data-menuanchor="n25" class="active"><a href="#n25"><span class="role">Front End Developer </span>@ CMA</a></li>
-	<li data-menuanchor="n1"><a href="#n1"><span class="role">Front End Developer </span>@ Imagemakers</a></li>
-	<li data-menuanchor="n2"><a href="#n2"><span class="role">Lecturer  </span>@ CodeSpace</a></li>
-	<li data-menuanchor="n3"><a href="#n3"><span class="role">Front End Freelancer  </span>@ Incendiary Blue</a></li>
-	<li data-menuanchor="n4"><a href="#n4"><span class="role">Front End Freelancer  </span>@ Brownie Points</a></li>
-	<li data-menuanchor="n5"><a href="#n5"><span class="role">Front End Developer  </span>@ Unboxed</a></li>
-	<li data-menuanchor="n6"><a href="#n6"><span class="role">Freelance Developer  </span>@ Themeticus</a></li>
-	<li data-menuanchor="n7"><a href="#n7"><span class="role">Front End Troubleshooter  </span>@ Lightspeed</a></li>
-	<li data-menuanchor="n8"><a href="#n8"><span class="role">Front End Freelancer  </span>@ Fireworkx</a></li>
-	<li data-menuanchor="n9"><a href="#n9"><span class="role">Front End Developer  </span>@ AquaOnline</a></li>
-	<li data-menuanchor="n10"><a href="#n10"><span class="role">Web Developer  </span>@ Awards</a></li>
-	<li data-menuanchor="n11"><a href="#n11"><span class="role">Front End Freelancer  </span>@ Naspers</a></li>
-	<li data-menuanchor="n12"><a href="#n12"><span class="role">Front End Freelancer  </span>@ MIH</a></li>
-	<li data-menuanchor="n13"><a href="#n13"><span class="role">Front End Engineer  </span>@ Praekelt</a></li>
-	<li data-menuanchor="n14"><a href="#n14"><span class="role">Interface Developer  </span>@ Lightspeed</a></li>
-	<li data-menuanchor="n15"><a href="#n15"><span class="role">Usability Consultant  </span>@DemocraticAlliance</a></li>
-	<li data-menuanchor="n16"><a href="#n16"><span class="role">User Interface Developer  </span>@ Safarinow</a></li>
-	<li data-menuanchor="n17"><a href="#n17"><span class="role">Web Developer  </span>@ FiredogDesign</a></li>
-	<li data-menuanchor="n18"><a href="#n18"><span class="role">Usability Consultant  </span>@ Kindo</a></li>
-	<li data-menuanchor="n19"><a href="#n19"><span class="role">User Interface Developer  </span>@ Questionmark</a></li>
-	<li data-menuanchor="n20"><a href="#n20"><span class="role">Web Developer  </span>@ FiredogDesign</a></li>
-	<li data-menuanchor="n21"><a href="#n21"><span class="role">Java Developer  </span>@ Telepassport</a></li>
-	<li data-menuanchor="n22"><a href="#n22"><span class="role">PHP Developer  </span>@ DJDownload</a></li>
-	<li data-menuanchor="n23"><a href="#n23"><span class="role">Usability Tester  </span>@ FiredogDesign</a></li>
-	<li data-menuanchor="n24"><a href="#n24"><span class="role">Game Tester  </span>@ SEGA</a></li>
+	<li data-menuanchor="n0"><a href="#n0"><span class="role">Front End Devloper </span>About</a></li>
+	<li><a href="#" style="visibility: hidden" >---</a></li>
+	<li data-menuanchor="n25" class="active"><a href="#n25"><span class="role">Front End Developer </span> CMA</a></li>
+	<li data-menuanchor="n1"><a href="#n1"><span class="role">Front End Developer </span> Imagemakers</a></li>
+	<li data-menuanchor="n2"><a href="#n2"><span class="role">Lecturer  </span> CodeSpace</a></li>
+	<li data-menuanchor="n3"><a href="#n3"><span class="role">Front End Freelancer  </span> Incendiary Blue</a></li>
+	<li data-menuanchor="n4"><a href="#n4"><span class="role">Front End Freelancer  </span> Brownie Points</a></li>
+	<li data-menuanchor="n5"><a href="#n5"><span class="role">Front End Developer  </span> Unboxed</a></li>
+	<li data-menuanchor="n6"><a href="#n6"><span class="role">Freelance Developer  </span> Project One Love</a></li>
+	<li data-menuanchor="n61"><a href="#n61"><span class="role">Freelance Developer  </span> Big Ambitions</a></li>
+	<li data-menuanchor="n7"><a href="#n7"><span class="role">Front End Troubleshooter  </span> Lightspeed</a></li>
+	<li data-menuanchor="n8"><a href="#n8"><span class="role">Front End Freelancer  </span> Fireworkx</a></li>
+	<li data-menuanchor="n9"><a href="#n9"><span class="role">Front End Developer  </span> AquaOnline</a></li>
+	<li data-menuanchor="n10"><a href="#n10"><span class="role">Web Developer  </span> Awards</a></li>
+	<li data-menuanchor="n11"><a href="#n11"><span class="role">Front End Freelancer  </span> Naspers</a></li>
+	<li data-menuanchor="n12"><a href="#n12"><span class="role">Front End Freelancer  </span> MIH</a></li>
+	<li data-menuanchor="n13"><a href="#n13"><span class="role">Front End Engineer  </span> Praekelt</a></li>
+	<li data-menuanchor="n14"><a href="#n14"><span class="role">Interface Developer  </span> Lightspeed</a></li>
+	<li data-menuanchor="n15"><a href="#n15"><span class="role">Usability Consultant  </span>DemocraticAlliance</a></li>
+	<li data-menuanchor="n16"><a href="#n16"><span class="role">User Interface Developer  </span> Safarinow</a></li>
+	<li data-menuanchor="n17"><a href="#n17"><span class="role">Web Developer  </span> FiredogDesign</a></li>
+	<li data-menuanchor="n18"><a href="#n18"><span class="role">Usability Consultant  </span> Kindo</a></li>
+	<li data-menuanchor="n19"><a href="#n19"><span class="role">User Interface Developer  </span> Questionmark</a></li>
+	<li data-menuanchor="n20"><a href="#n20"><span class="role">Web Developer  </span> FiredogDesign</a></li>
+	<li data-menuanchor="n21"><a href="#n21"><span class="role">Java Developer  </span> Telepassport</a></li>
+	<li data-menuanchor="n22"><a href="#n22"><span class="role">PHP Developer  </span> DJDownload</a></li>
+	<li data-menuanchor="n23"><a href="#n23"><span class="role">Usability Tester  </span> FiredogDesign</a></li>
+	<li data-menuanchor="n24"><a href="#n24"><span class="role">Game Tester  </span> SEGA</a></li>
 </ul>	
 
 <div id="fullpage">
 
-	<div class="section">
-		<div class="stint">
-			<h1>beep</h1>			
-			<p class="insight">After receiving a solid public education from 1985 to 1997, I skipped tertiary education and	moved to London in 1999. Traveled around for a bit working on farms and in bars. Lived in Spain for a	while then Portugal, travelled extensively in and around Europe and then back to Cape Town in 2002.	Worked in Cape Town and then returned to London in 2004 for another more focused attempt at	etching out a living for myself. Returned in 2006 and I've been in Cape	Town ever since. No wife, kids, pets, piercings, tattoos, jewellery and a real love for the work I do. I am largely self-taught and continue learning and researching all the time.</p>
-			<p>
-				<i>My name's Lloyd <br/>I'm available to learn</i><br/>
-			</p>
+	<div class="section" style="background-image: url(img/hugh-mosno.jpg); background-size: cover;background-position: 50% 0%;">
+		<div  style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;      width: 100%;
+    height: 100%;">
+		<div class="stint"	>
+			
+				<h1>fengui</h1>
+				<p style="position: fixed;bottom: 0; left: 0; background-color: black;color:white; padding: 10px 20px">
+					we build web things<br/>
+					we are language and framework agnostic<br/> </p>		
+
+			
 		</div>
+	</div>
 	</div>	
 
 	<div class="section">
 		<div class="stint">
 			<h1>Front End Developer</h1>
 			<p>June 2018 - December 2018</p>			
-			<p class="insight">Retrofitting uniformity to the user experience &amp; underlying interface of <a href="https://www.cmainfo.co.za">CMA</a>'s market analysis application. Its the classic tale of the app, that needed nothing more than a little love.</p><br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			<p class="insight">Retrofitting uniformity to the user experience &amp; underlying interface of <a href="https://www.cmainfo.co.za">CMA</a>'s market analysis application. I was tasked with modernizing the front end experience and spent a hugh chunk of time developing working prototypes to showcase potential UX or UI enhancements.</p>
+			
+						<p><i>"Resourceful"</i> - <b>Owen Chakauya</b><br/>&nbsp;&nbsp;<small>Development Lead @CMA</small><br/></p>
 		</div>
 	</div>
 
@@ -143,8 +156,9 @@
 		<div class="stint">
 			<h1>Front End Developer</h1>
 			<p>January 2018 - June 2018</p>			
-			<p class="insight">A mixture of Custom Javascript and Wordpress Templates. The task was to <a href="http://imagemakers.co.za.www9.cpt2.host-h.net">simplify the User Interface</a> &amp; hopefully having the knock on effect of improving the User Experience for their catalogue website. Built using Vue.js on the front-end, talking to a headless Wordpress CMS and wrapped inside of NUXT.js, for some baked-in SEO goodness. Using analytics and user feedback as a guide, we began prototyping fully functional layouts, forms, navigational elements &amp; menus as the starting point, once stress-tested and approved, the components were composed into templates and retrofitted with the overall visual strategy, mainly dictating color, font and visual arrangment.</p><br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			<p class="insight">A mixture of Custom Javascript and Wordpress Templates. Built using Vue.js on the front-end, talking to a headless Wordpress CMS and wrapped inside of NUXT, for some baked-in SEO goodness. Using analytics and user feedback as a guide, we began prototyping fully functional layouts, forms, navigational elements &amp; menus as the starting point. Once stress-tested and approved, the components were composed into templates and retrofitted with the overall visual strategy.</p>
+			
+				<a href="https://bitbucket.org/imagemakers/imagemakers.bitbucket.io/src/master/" target="_blank">view source on bitbucket</a>
 		</div>
 	</div>
 
@@ -152,8 +166,8 @@
 		<div class="stint">
 			<h1>Lecturer</h1>
 			<p>September 2017 - December 2018</p>					
-			<p class="insight">Contracted by <a href="http://codespace.co.za/">CodeSpace</a> to Lecture at <a href="http://lifechoices.co.za/">Life Choices</a>. The opportunity to shape young, tech-savvy minds is something that pays in bucketloads. When you stop selling the industry and start sharing insights, you get a chance to equip eager minds not only with skills for software development, but also the soft skills missing from many development environments across the planet.</p><br/>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			<p class="insight">Contracted by <a href="http://codespace.co.za/">CodeSpace</a> to Lecture at <a href="http://lifechoices.co.za/">Life Choices</a>. The opportunity to shape young, tech-savvy minds is something that pays in bucketloads. When you stop selling the industry and start sharing insights, you get a chance to equip eager minds not only with skills for software development, but also the soft skills missing from many development environments across the planet.</p>
+			
 			<p><i>"Positive &amp; Knowledgeable"</i> - <b>Stefan Louw</b><br/>&nbsp;&nbsp;<small>Founder @CodeSpace</small><br/></p>
 		</div>
 	</div>
@@ -162,8 +176,8 @@
 		<div class="stint">
 			<h1>Front End Freelancer</h1>
 			<p>August 2017 - September 2017</p>					
-			<p class="insight">Front End Support for <a href="http://incendiaryblue.com/">Incendiary Blue</a>. Updating templates for <a href="https://www.thomascookairlines.com/">Thomas Cook</a> and some bit and bobs here and there.</p><br/>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			<p class="insight">Front End Support for <a href="http://incendiaryblue.com/">Incendiary Blue</a>. Updating templates for <a href="https://www.thomascookairlines.com/">Thomas Cook</a> and some bit and bobs here and there.</p>
+			
 		</div>
 	</div>			 
 			
@@ -171,8 +185,8 @@
 		<div class="stint">
 			<h1>Front End Freelancer</h1>
 			<p>June 2017 - August 2017</p>					
-			<p class="insight">Front End Support for <a href="https://www.brownie-points.co.za/">Brownie Points</a>, updating styles, modifying templates and fixing bugs as and when they cropped up. </p><br/>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			<p class="insight">Front End Support for <a href="https://www.brownie-points.co.za/">Brownie Points</a>, updating styles, modifying templates and fixing bugs as and when they cropped up. </p>
+			
 			</p><i>"A special human"</i> - <b>Pascale Henke</b><br/>&nbsp;&nbsp;<small>Owner @BrowniePoints</small><br/>
 		</div>
 	</div>
@@ -181,8 +195,8 @@
 		<div class="stint">
 			<h1>Front End Developer</h1>
 			<p>June 2016 - June 2017</p>
-			<p class="insight">Responsible for front end maintenance of <a href="https://onlineinvesting.sanlam.co.za/">Sanlam’s Online Investing portal</a>. Updating Style Guide(s) and providing <a href="https://bellryck.sanlam.co.za/">customisation</a> for the white-labelled version of their application. I also provided CSS &amp; JS support for <a href="https://www.augmento.ai/">Augmento</a>, running their own custom Ruby on Rails application. Unboxed Cape Town was a production house run out of the UK and officially closed its doors in June of 2017.</p><br/>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			<p class="insight">Responsible for front end maintenance of <a href="https://onlineinvesting.sanlam.co.za/">Sanlam’s Online Investing portal</a>. Updating Style Guide(s) and providing <a href="https://bellryck.sanlam.co.za/">customisation</a> for the white-labelled version of their application. I also provided CSS &amp; JS support for <a href="https://www.augmento.ai/">Augmento</a>, running their own custom Ruby on Rails application. Unboxed Cape Town was a production house run out of the UK and officially closed its doors in June of 2017.</p>
+			
 			<p>
 				<i>"Highly Adaptable"</i> - <b>Carlo Kruger</b><br/>&nbsp;&nbsp;<small>Development Manager @Unboxed</small><br/>
 			</p>
@@ -192,36 +206,43 @@
 	<div class="section">
 		<div class="stint">
 
-			<h1>Freelancer</h1>
-			<p>September 2015 - May 2016</p>
-
-			<p class="insight">among other things....</p><br/>
+			<h1>Front End Developer</h1>
+			<p>Jan 2016 - May 2016</p>
 
 			<p class="insight">
-				Custom Design and Development for <a href="https://themeticus.github.io/onelove/">Project One Love</a>. 
-			</p><i>"Competent"</i> - <b>Hugh Mosno</b><br/>&nbsp;&nbsp;<small>CTO @Themeticus</small><br/>
+				Built in 2014, it still boasts a modern feel. Completely coded from scratch, this custom design and development for <a href="https://themeticus.github.io/onelove/">Project One Love</a> was truly a labour of love. 
+			</p>
+			<i>"Jitz"</i> - <b>Lindsey Appolis</b><br/>&nbsp;&nbsp;<small>Owner@appolis.co.za</small><br/><br/>
+			<a href="https://github.com/themeticus/onelove" target="_blank">view source on github</a><br/>
 
-			<p>&nbsp;</p>
 
-			<p class="insight">
+<!-- 			<p class="insight">
 				Pro Bono One Page Wordpress Theme for <a href="http://thebikepickup.co.za/">thebikepickup</a>.
-			</p><i>"Patient &amp; Professional"</i> - <b>Brian Liederman</b><br/>&nbsp;&nbsp;<small>Owner @LiederExpress</small><br/>
+			</p><i>"Patient &amp; Professional"</i> - <b>Brian Liederman</b><br/>&nbsp;&nbsp;<small>Owner @LiederExpress</small>
+ -->
+		</div>
+	</div>
 
-			<p>&nbsp;</p>
+
+	<div class="section">
+		<div class="stint">
+
+			<h1>Front End Developer</h1>
+			<p>September 2015 - Dec 2015</p>
 
 			<p class="insight">
 				CSS Wrangler for <a href="https://bigambitions.co.za/">Big Ambitions</a> and <a href="http://checkedin.co.za/">CheckedIn</a>.
 			</p><i>"Strategic"</i> - <b>Natalia Rosa</b><br/>&nbsp;&nbsp;<small>Director @Big Ambitions</small><br/>
 
 		</div>
-	</div>
+	</div>	
 
 	<div class="section">
 		<div class="stint">
 			<h1>Front End Troubleshooter</h1>
 			<p>August 2014 - August 2015</p>
-			<p class="insight">Everything from answering the phones to improving the User Experience of client websites. Responsible for anything and everthing on the front end. <a href="https://www.lsdev.biz/">Lightspeed</a> is a Wordpress house that operate as a distributed team, working mainly within the hospitality industry. My favourite projects were <a href="https://www.maisonnoir.co.za/">Maison Noir</a>, <a href="https://www.duinepos.co.za/">Duinepos</a> and <a href="https://www.cityscapesdigital.net/">CityScapes</a></p><br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			<p class="insight">Improving the User Experience of client websites and responsible for anything and everthing on the front end. <a href="https://www.lsdev.biz/">Lightspeed</a> is a Wordpress house that operate as a distributed team, working mainly within the hospitality industry. My favourite projects were <a href="https://www.maisonnoir.co.za/">Maison Noir</a>, <a href="https://www.duinepos.co.za/">Duinepos</a> and <a href="https://www.cityscapesdigital.net/">CityScapes</a></p>
+			
 			<p><i>"Team Player"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
 		</div>
 	</div>
@@ -230,8 +251,8 @@
 		<div class="stint">
 			<h1>Front End Freelancer</h1>
 			<p>June 2014 - August 2014</p>			
-			<p class="insight">I was tasked with tackling a backlog of features and maintenance requests for Sanlam's SanPort application. <a href="https://fireworkx.com/">Fireworkx</a> boasts one of the tightest development teams I've come across.</p><br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			<p class="insight">I was tasked with tackling a backlog of features and maintenance requests for Sanlam's SanPort application. <a href="https://fireworkx.com/">Fireworkx</a> boasts one of the tightest development teams I've come across.</p>
+			
 			<p><i>"Reliable"</i> - <b>Oluwafemi Otusanya</b><br/>&nbsp;&nbsp;<small>Development Lead @Fireworkx</small></p>
 		</div>
 	</div>
@@ -241,7 +262,7 @@
 			<h1>Front End Developer</h1>
 			<p>June 2012 - August 2014</p>			
 			<p class="insight">A few responsive HTML email templates, some microsites and other bits and bops on the front end. <a href="http://aquaonline.com/">Aqua</a> Cape Town closed their doors late in 2014 but the agency is alive and well. Outside of the above I implemented feature requsts and provided on-going maintenance for <a href="https://www.pnp.co.za">Pick 'n Pay</a> and a few other clients in their portoflio.<br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			
 			<p><i>"A True Legend"</i> - <b>Craig Bartlett</b><br/>&nbsp;&nbsp;<small>Development Lead @AquaOnline</small></p>
 		</div>
 	</div>
@@ -251,7 +272,7 @@
 			<h1>Web Developer</h1>
 			<p>January 2011 - June 2012</p>			
 			<p class="insight">A never ending churning of campaign specific websites for <a href="http://awards.co.za/">Achievement Awards</a>. I developed a ton of soft skills during my time there. It also took me a while to understand their core business, which is essentially behaviour modification. Nice people!<br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			
 			<p><i>"An Asset"</i> - <b>Roger Ingarfield</b><br/>&nbsp;&nbsp;<small>Creative Director @Achievment Awards</small></p>
 		</div>
 	</div>	
@@ -261,7 +282,7 @@
 			<h1>Front End Freelancer</h1>
 			<p>July 2010 - December 2010</p>		
 			<p class="insight">Working in a large distributed team, I was active during the transition from .net to .com. <a href="http://kalahari.net">Kalahari</a> was a brief contract to help ease the surge in internal development traffic during the transition phase. Received quite a bit of training with <a href="https://www.hybris.com/en/">Hybris</a>, their e-commerce platform of choice. <br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			
 		</div>
 	</div>	
 
@@ -270,7 +291,7 @@
 			<h1>Front End Freelancer</h1>
 			<p>March 2010 - June 2010</p>		
 			<p class="insight">Working in a small team, I was focused on front end component development &amp; documentation for their upgrade from 1.0 to 2.0, <a href="http://pricecheck.com">Pricecheck</a> work with the very familiar LAMP &amp; WAMP stacks.<br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			
 		</div>
 	</div>	
 
@@ -279,7 +300,7 @@
 			<h1>Front End Engineer</h1>
 			<p>March 2010 - June 2010</p>		
 			<p class="insight">A brief stint with <a href="https://www.praekelt.com/">Praekelt</a> to flesh out the then newly designed interface for <a href="https://kfc.co.za/">KFC</a>. <br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			
 		</div>
 	</div>		
 
@@ -287,8 +308,8 @@
 		<div class="stint">
 			<h1>Interface Developer</h1>
 			<p>September 2009 - February 2010</p>
-			<p class="insight">Custom Wordpress theme development, plugin modifications &amp; HTML newsletters was the core of what I focused on during my time at Lightspeed. I landed this contract after a very successful roll-out of my work done in previous months with the <a href="https://www.da.org.za/">Democratic Alliance</a>.</p><br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			<p class="insight">Custom Wordpress theme development, plugin modifications &amp; HTML newsletters was the core of what I focused on during my time at Lightspeed. I landed this contract after a very successful roll-out of my work done in previous months with the <a href="https://www.da.org.za/">Democratic Alliance</a>.</p>
+			
 			<p><i>"Team Player"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
 		</div>
 	</div>		
@@ -297,8 +318,8 @@
 		<div class="stint">
 			<h1>Usability Consultant</h1>
 			<p>May 2009 - September 2009</p>
-			<p class="insight">Contracted by <a href="https://www.lsdev.biz/">Lightspeed</a> to work with the <a href="https://www.da.org.za/">Democratic Alliance</a> to produce a 120 page low-fidelity, but fully functional prototype, that would be used as the wireframe to roll out their then Volunteer Outreach Program.</p><br/>
-			<p>HTML, CSS, Javascript and friends</p>
+			<p class="insight">Contracted by <a href="https://www.lsdev.biz/">Lightspeed</a> to work with the <a href="https://www.da.org.za/">Democratic Alliance</a> to produce a 120 page low-fidelity, but fully functional prototype, that would be used as the wireframe to roll out their then Volunteer Outreach Program.</p>
+			
 			<p><i>"Team Player"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
 		</div>
 	</div>
@@ -307,8 +328,8 @@
 		<div class="stint">
 			<h1>User Interface Developer</h1>
 			<p>November 2007 - April 2009</p>
-			<p class="insight">Established a style guide and refactored legacy code into semantically beautiful mark-up across hundreds of pages and templates. The entire <a href="https://www.safarinow.com/">Safarinow</a> development team use to surf during lunch breaks, how cool is that?</a></p><br/>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			<p class="insight">Established a style guide and refactored legacy code into semantically beautiful mark-up across hundreds of pages and templates. The entire <a href="https://www.safarinow.com/">Safarinow</a> development team use to surf during lunch breaks, how cool is that?</a></p>
+			
 			<p>
 				<i>"Solid"</i> - <b>Matthew Swart</b><br/>&nbsp;&nbsp;<small>Owner @Safarinow</small><br/>
 			</p>
@@ -319,8 +340,8 @@
 		<div class="stint">
 			<h1>Web Developer</h1>
 			<p>October 2006 – October 2007</p>
-			<p class="insight">I acted as a bridge between the design studio and the development team remotely. I have been working on and off with <a href="http://www.firedog.co.uk/">Firedog</a> for many years. </p><br/>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			<p class="insight">I acted as a bridge between the design studio and the development team remotely. I have been working on and off with <a href="http://www.firedog.co.uk/">Firedog</a> for many years. </p>
+			
 			<p>
 				<i>"Pleasantly Surprised"</i> - <b>Clifford Boobyer</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small><br/>
 			</p>
@@ -332,7 +353,7 @@
 			<h1>Usability Consultant</h1>
 			<p>September 2006 – October 2006</p>
 			<p class="insight">Kindo.com are now <a href="https://www.myheritage.com/">My Heritage</a>. The brief was pretty much "How can we make this thing better..." - All I did was "Move that here, put that there..." using common sense and fleshing this thinking out with HTML and CSS. <br/></p>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			
 			<p>
 				<i>"Good Guy"</i> - <b>Gareth Knight</b><br/>&nbsp;&nbsp;<small>CTO @Kindo</small><br/>
 			</p>
@@ -343,8 +364,7 @@
 		<div class="stint">
 			<h1>User Interface Developer</h1>
 			<p>April 2005 – August 2006</p>
-			<p class="insight"> Completed projects include over 50 prototypes, 11 of which are fully functional interfaces in commercial use today. I facilitated this through effective user research and in-house use case studies. I worked with product designers to produce illustrative and working prototypes for enhancements to and new functionality for the product portfolio. I produced designs and user story documentation for the development team i.e. paper prototyping, wire-frames etc. While at <a href="https://www.questionmark.com/">Questionmark</a> I worked closely with the various development teams to ensure designs were implemented correctly and to help resolve implementation hiccups like cross-browser compatibility issues among other things.</p><br/>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			<p class="insight">  At <a href="https://www.questionmark.com/">Questionmark</a> I worked closely with the various development teams to ensure designs were implemented correctly and to help resolve implementation hiccups. I produced designs and user story documentation for the development team using paper prototyping, wire-frames etc. Completed projects include over 50 prototypes, 11 of which are fully functional interfaces still in commercial use today. </p>
 			<p>
 				<i>"Gets the job done!"</i> - <b>John Kleeman</b><br/>&nbsp;&nbsp;<small>Owner @Questionmark</small><br/>
 			</p>
@@ -356,7 +376,7 @@
 			<h1>Web Developer</h1>
 			<p>April 2004 – March 2005</p>
 			<p class="insight">I spent most of my days converting PSD-to-HTML, testing these implementations cross browser and then passing it off to third party developers for integration. This was also my first stint with proper documentation to ease the communications betweeen Design and Development.<br/></p>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			
 			<p>
 				<i>"Competent"</i> - <b>Fraser Black</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small><br/>
 			</p>
@@ -368,7 +388,7 @@
 			<h1>Java Developer</h1>
 			<p>August 2002 – March 2004</p>
 			<p class="insight">Telepassport are now <a href="http://www.hugetelecom.co.za/">Huge Telecom</a>. My first encounter with Servlets and JSP. I never really took to Java, it would be JavaScript though in the end, that would steal my heart.<br/></p>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			
 			<p>
 				<i>"Great Spirit"</i> - <b>Jonathan Kimber</b><br/>&nbsp;&nbsp;<small>CTO @Telepassport</small><br/>
 			</p>
@@ -380,7 +400,7 @@
 			<h1>PHP Developer</h1>
 			<p>March 2002 – July 2002</p>
 			<p class="insight">DJ Download no longer exists. It was a crash and burn project from the guys at <a href="https://djmag.com//">DJ Mag UK</a>. Some PHP templates and a bit of tinkering.<br/></p>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			
 			<p>
 				<i>"Consistent"</i> - <b>Hugh Mckensie</b><br/>&nbsp;&nbsp;<small>CTO @DJDownload</small><br/>
 			</p>
@@ -392,7 +412,7 @@
 			<h1>Usability Tester</h1>
 			<p>December 2001 – March 2002</p>
 			<p class="insight">My first taste of Agency life at their trendy SOHO offices in London. <a href="https://uk.linkedin.com/in/cliffordboobyer">Cliff</a>, <a href="https://za.linkedin.com/in/fraserblackct">Fraser</a> and <a href="https://za.linkedin.com/in/andrew-philp-575b013">Andrew</a> taught me everything I needed to know about the industry, some of Cliff's lessons stay with me to this day. They literally took me in off the street with some game testing experience and nothing but a yearning to learn more. <br/></p>
-			<p>HTML, CSS, Javascript and friends<br/></p>
+			
 			<p>
 				<i>"Happy Chappy"</i> - <b>Andrew Philp</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small><br/>
 			</p>
@@ -403,8 +423,8 @@
 		<div class="stint">
 			<h1>Game Tester</h1>
 			<p>June 2000 – Feburary 2001</p>
-			<p class="insight">I really enjoyed my time at <a href="https://www.sega.co.uk/">SEGA</a> in Gunnersbury. Made loads of friends and got to really understand the product life cycle.<br/></p>
-			<p>Testing with VHS recorders (:<br/></p>
+			<p class="insight">I really enjoyed my time at <a href="https://www.sega.co.uk/">SEGA</a> in Gunnersbury. Made loads of friends and got to really understand the product life cycle. Bugs were recorded with VHS recorders (:<br/></p>
+		
 			<p>
 				<i>"Good Bloke"</i> - <b>Sheldon Damons</b><br/>&nbsp;&nbsp;<small>Team Leader @SEGA</small><br/>
 			</p>
@@ -417,7 +437,7 @@
 
 <script>
 	$('#fullpage').fullpage({
-		anchors: ['n0','n25','n1', 'n2', 'n3', 'n4', 'n5', 'n6', 'n7', 'n8', 'n9', 'n10', 'n11', 'n12',
+		anchors: ['n0','n25','n1', 'n2', 'n3', 'n4', 'n5', 'n6', 'n61', 'n7', 'n8', 'n9', 'n10', 'n11', 'n12',
 		'n13',
 		'n14',
 		'n15',
