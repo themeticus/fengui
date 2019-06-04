@@ -4,13 +4,14 @@
 	<meta name="viewport" content="width=device-width">
 	<title>themeticus timeline</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://themeticus.github.io/021/media/img/1ove.ico">
-	<link rel="stylesheet" type="text/css" href="js/fullpage.js/dist/jquery.fullpage.css" />
 	<script src="js/jquery/dist/jquery.min.js"></script>
-	<script src="js/fullpage.js/vendors/jquery.easings.min.js"></script>
-	<script src="js/fullpage.js/vendors/scrolloverflow.min.js"></script>
-	<script src="js/fullpage.js/dist/jquery.fullpage.min.js"></script>	
+
+		<link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 
 	<style>
+
+
 		@font-face {
 			/* this is my very own font, hacked from someone else's very own font...   */
 		  font-family: 'onelove';
@@ -44,44 +45,18 @@
 		    border-radius: 0 3px 3px 0;
 		}
 
-		.stint {
-			max-width: 65%;
-			padding: 0 20px;
-			position: absolute;
-			top: 10px;
-		}
 
 		.stint>p:first-of-type {
 			font-size: 14px;
     		text-transform: uppercase;
-    		color: #999;
+    		color: #999 !important;
 		}
 
 		.insight {
 			font-size: 1.4em;
 		}
 
-		#myMenu {
-			position: fixed;
-			top: 0;
-			right: 0;
-			z-index: 999;
-			list-style: none;	
-			overflow: auto;
-    		height: 100vh;
-		}
 
-		#myMenu ul {
-	    border-bottom: 1px solid #ccc;
-	    padding: 5px 10px;
-		}
-
-		#myMenu a {
-			display: block;
-	    float: right;
-	    clear: right;
-	    padding: 1% 6% 1% 5%
-		}
 
 		.active>a {
 			color: white !important;
@@ -96,94 +71,116 @@
 		  }
 		}  
 
-		.role  {
-			display: none ;
-		}
 
-		.engraved {
-		    font-size: 2em;
-		    background-color: #666666;
-		    -webkit-background-clip: text;
-		    -moz-background-clip: text;
-		    background-clip: text;
-		    color: transparent;
-		    text-shadow: rgba(245,245,245,0.5) 3px 5px 1px;
+		 .compact-h1 {
 		    position: fixed;
-		    bottom: 10px;
-		    right: 10px;
-		    z-index: 1
+		    bottom: 47px;
 		 }
 
+		 .compact-p {
+position: fixed;
+    background-color: black;
+    color: white;
+    padding: 6px 10px 7px;
+    border-radius: 0 3px 3px 0;
+    bottom: 53px;
+    left: 86px;
+		 }
+
+		 .section {
+
+		 	background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;      width: 100%;
+    height: 100%;
+ 
+
+		 }
+
+		 .stint {
+		 	    width: calc(65% - 40px) !important;
+    background: white;
+    padding: 20px;
+		 }
+
+		 .partner {
+		 	display: block;
+		 	padding: 10px 0;
+		 	background: orange;
+		 	color: black;
+		 	text-align: center;
+		 }
+
+		 .slider-nav .slick-current {
+		 	background-color: black !important;
+		 	color: white !important;
+		 }
+
+		 .slick-prev {
+    left: 10px !important;
+}
+
+.slick-next {
+    right: 10px !important;
+}
+
+.slick-prev, .slick-next {
+	bottom: 0px !important;
+	z-index: 99999 !important
+}
+
+.slick-current .partner {
+	background: black !important;
+	color:white !important;	
+}
 
 	</style>
 
+
 </head>
-<body>
+<body style="background-image: url(img/hugh-mosno.jpg); background-size: cover;background-position: 50% 0%; height: 100vh">
 
-<ul id="myMenu">
-	<li data-menuanchor="n0"><a href="#n0"><span class="role">Front End Devloper </span>about</a></li>
-	<li><a href="#" style="visibility: hidden" >---</a></li>
-<!-- 	<li data-menuanchor="n26" class="active"><a href="#n26"><span class="role">Front End Developer </span> Fetola</a></li> -->
-	<li data-menuanchor="n25"><a href="#n25"><span class="role">Front End Developer </span> CMA</a></li>
-	<li data-menuanchor="n1"><a href="#n1"><span class="role">Front End Developer </span> Imagemakers</a></li>
-	<li data-menuanchor="n2"><a href="#n2"><span class="role">Lecturer  </span> CodeSpace</a></li>
-	<li data-menuanchor="n3"><a href="#n3"><span class="role">Front End Freelancer  </span> Inc Blue</a></li>
-	<li data-menuanchor="n4"><a href="#n4"><span class="role">Front End Freelancer  </span> Brownie&nbsp;Points</a></li>
-	<li data-menuanchor="n27"><a href="#n27"><span class="role">Front End Developer </span> The Bike Pickup</a></li>
-	<li data-menuanchor="n5"><a href="#n5"><span class="role">Front End Developer  </span> Unboxed</a></li>
-	<li data-menuanchor="n6"><a href="#n6"><span class="role">Freelance Developer  </span> Henosis</a></li>
-	<li data-menuanchor="n61"><a href="#n61"><span class="role">Freelance Developer  </span> Big Ambitions</a></li>
-	<li data-menuanchor="n7"><a href="#n7"><span class="role">Front End Troubleshooter  </span> Lightspeed</a></li>
-	<li data-menuanchor="n8"><a href="#n8"><span class="role">Front End Freelancer  </span> Fireworkx</a></li>
-	<li data-menuanchor="n9"><a href="#n9"><span class="role">Front End Developer  </span> Aqua Online</a></li>
-	<li data-menuanchor="n10"><a href="#n10"><span class="role">Web Developer  </span> Awards</a></li>
-	<li data-menuanchor="n11"><a href="#n11"><span class="role">Front End Freelancer  </span> Naspers</a></li>
-	<li data-menuanchor="n12"><a href="#n12"><span class="role">Front End Freelancer  </span> MIH</a></li>
-	<li data-menuanchor="n13"><a href="#n13"><span class="role">Front End Engineer  </span> Praekelt</a></li>
-	<li data-menuanchor="n14"><a href="#n14"><span class="role">Interface Developer  </span> Lightspeed</a></li>
-	<li data-menuanchor="n15"><a href="#n15"><span class="role">Usability Consultant  </span>DA</a></li>
-	<li data-menuanchor="n16"><a href="#n16"><span class="role">User Interface Developer  </span> Safarinow</a></li>
-	<li data-menuanchor="n17"><a href="#n17"><span class="role">Web Developer  </span> Firedog Design</a></li>
-	<li data-menuanchor="n18"><a href="#n18"><span class="role">Usability Consultant  </span> Kindo</a></li>
-	<li data-menuanchor="n19"><a href="#n19"><span class="role">User Interface Developer  </span> Questionmark</a></li>
-	<li data-menuanchor="n20"><a href="#n20"><span class="role">Web Developer  </span> Firedog Design</a></li>
-	<li data-menuanchor="n21"><a href="#n21"><span class="role">Java Developer  </span> Telepassport</a></li>
-	<li data-menuanchor="n22"><a href="#n22"><span class="role">PHP Developer  </span> DJ Download</a></li>
-	<li data-menuanchor="n23"><a href="#n23"><span class="role">Usability Tester  </span> Firedog Design</a></li>
-	<li data-menuanchor="n24"><a href="#n24"><span class="role">Game Tester  </span> SEGA</a></li>
-</ul>
+<div class="section">
 
-<!-- <div class="engraved">fengui</div>	 -->
 
-<div id="fullpage">
 
-	<div class="section" style="background-image: url(img/hugh-mosno.jpg); background-size: cover;background-position: 50% 0%;">
-		<div  style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;      width: 100%;
-    height: 100%;">
-		<div class="stint"	>
-			
-				<h1>fengui</h1>
-				<p style="position: fixed;bottom: 0; left: 0; background-color: black;color:white; padding: 10px 20px;     border-radius: 0 3px 3px 0;">
-					
-					language &amp; framework agnostic<br/>
-					we help shape digital stuff<br/></p>		
+<div style="position: fixed; top: 0; left: 0; width: 100%; z-index: 9999 !important  ">
 
-			
-		</div>
+
+	<div class="slider slider-nav">
+	    <div class="partner"> CMA </div>
+	    <div class="partner"> Imagemakers </div>
+	    <div class="partner"> CodeSpace	</div>
+	    <div class="partner"> Inc Blue	</div>
+	    <div class="partner"> Brownie&nbsp;Points	</div>
+	    <div class="partner"> The&nbsp;Bike&nbsp;Pickup	</div>
+	    <div class="partner"> Unboxed	</div>
+	    <div class="partner"> Henosis	</div>
+	    <div class="partner"> Big Ambitions	</div>
+	    <div class="partner"> Lightspeed	</div>
+	    <div class="partner"> Fireworkx	</div>
+	    <div class="partner"> Aqua Online	</div>
+	    <div class="partner"> Awards	</div>
+	    <div class="partner"> Naspers	</div>
+	    <div class="partner"> MIH	</div>
+	    <div class="partner"> Praekelt	</div>
+	    <div class="partner"> Lightspeed	</div>
+	    <div class="partner"> DA	</div>
+	    <div class="partner"> Safarinow	</div>
+	    <div class="partner"> Firedog Design	</div>
+	    <div class="partner"> Kindo	</div>
+	    <div class="partner"> Questionmark	</div>
+	    <div class="partner"> Firedog Design	</div>
+	    <div class="partner"> Telepassport	</div>
+	    <div class="partner"> DJ Download	</div>
+	    <div class="partner"> Firedog Design	</div>
+	    <div class="partner"> SEGA	</div>
 	</div>
-	</div>	
 
-<!-- 	<div class="section">
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>June 2019 - July 2019</p>			
-			<p class="insight">Wordpress to Squarespace migration and website upgrade for <a href="http://fetola.co.za">Fetola</a>'s Catalyst website.  </p>
-			
-			<p><i>"Thorough"</i> - <b>Kirsten Barnes</b><br/>&nbsp;&nbsp;<small>Media Manager @Fetola</small><br/></p>
-		</div>
-	</div> -->
 
-	<div class="section">
+
+	<div class="slider slider-for" style="   " >
+
+
+
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>June 2018 - December 2018</p>			
@@ -191,9 +188,7 @@
 			
 						<p><i>"Resourceful"</i> - <b>Owen Chakauya</b><br/>&nbsp;&nbsp;<small>Development Lead @CMA</small><br/></p>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>January 2018 - June 2018</p>			
@@ -201,9 +196,7 @@
 			
 				<a href="https://bitbucket.org/imagemakers/imagemakers.bitbucket.io/src/master/" target="_blank">view source on bitbucket</a>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 			<h1>Lecturing</h1>
 			<p>September 2017 - December 2018</p>					
@@ -211,9 +204,8 @@
 			
 			<p><i>"Positive &amp; Knowledgeable"</i> - <b>Stefan Louw</b><br/>&nbsp;&nbsp;<small>Founder @CodeSpace</small><br/></p>
 		</div>
-	</div>
 
-	<div class="section">
+
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>August 2017 - September 2017</p>					
@@ -222,9 +214,7 @@
 			<p><small>@Agency</small><br/></p>
 			
 		</div>
-	</div>			 
-			
-	<div class="section">
+
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>June 2017 - August 2017</p>					
@@ -232,9 +222,7 @@
 			
 			</p><i>"A special human"</i> - <b>Pascale Henke</b><br/>&nbsp;&nbsp;<small>Owner @BrowniePoints</small><br/>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>May 2019</p>	
@@ -244,9 +232,7 @@
 
 			<p><i>"Patient &amp; Professional"</i> - <b>Brian Liederman</b><br/>&nbsp;&nbsp;<small>Owner @LiederExpress</small></p>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>June 2016 - June 2017</p>
@@ -256,9 +242,7 @@
 				<i>"Highly Adaptable"</i> - <b>Carlo Kruger</b><br/>&nbsp;&nbsp;<small>Development Manager @Unboxed</small><br/>
 			</p>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 
 			<h1>Front End Development</h1>
@@ -271,10 +255,7 @@
 			<a href="https://github.com/themeticus/onelove" target="_blank">view source on github</a><br/>
 
 		</div>
-	</div>
 
-
-	<div class="section">
 		<div class="stint">
 
 			<h1>Front End Development</h1>
@@ -285,9 +266,7 @@
 			</p><i>"Strategic"</i> - <b>Natalia Rosa</b><br/>&nbsp;&nbsp;<small>Director @Big Ambitions</small><br/>
 
 		</div>
-	</div>	
 
-	<div class="section">
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>August 2014 - August 2015</p>
@@ -295,9 +274,7 @@
 			
 			<p><i>"Team Player"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>June 2014 - August 2014</p>			
@@ -305,9 +282,7 @@
 			
 			<p><i>"Reliable"</i> - <b>Oluwafemi Otusanya</b><br/>&nbsp;&nbsp;<small>Development Lead @Fireworkx</small></p>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>June 2012 - August 2014</p>			
@@ -315,18 +290,14 @@
 			
 			<p><i>"A True Legend"</i> - <b>Craig Bartlett</b><br/>&nbsp;&nbsp;<small>Development Lead @AquaOnline</small></p>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 			<h1>Web Development</h1>
 			<p>January 2011 - June 2012</p>			
 			<p class="insight">A never-ending churning of campaign specific microsites, mobisites and websites for <a href="http://awards.co.za/">Achievement Awards'</a> various clients.<br/>			
 			<p><i>"An Asset"</i> - <b>Roger Ingarfield</b><br/>&nbsp;&nbsp;<small>Creative Director @Achievment Awards</small></p>
 		</div>
-	</div>	
 
-	<div class="section">
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>July 2010 - December 2010</p>		
@@ -334,9 +305,7 @@
 			</p>		
 				<p><small>@Agency</small><br/></p>
 		</div>
-	</div>	
 
-	<div class="section">
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>March 2010 - June 2010</p>		
@@ -344,9 +313,7 @@
 				<p><small>@Agency</small><br/></p>
 			
 		</div>
-	</div>	
 
-	<div class="section">
 		<div class="stint">
 			<h1>Front End Development</h1>
 			<p>March 2010 - June 2010</p>		
@@ -354,9 +321,7 @@
 				<p><small>@Agency</small><br/></p>
 			
 		</div>
-	</div>		
 
-	<div class="section">
 		<div class="stint">
 			<h1>Interface Development</h1>
 			<p>September 2009 - February 2010</p>
@@ -364,9 +329,7 @@
 			
 			<p><i>"Team Player"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
 		</div>
-	</div>		
 
-	<div class="section">
 		<div class="stint">
 			<h1>Usability Consultant</h1>
 			<p>May 2009 - September 2009</p>
@@ -374,9 +337,7 @@
 			
 			<p><i>"Creative"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 			<h1>User Interface Development</h1>
 			<p>November 2007 - April 2009</p>
@@ -386,9 +347,7 @@
 				<i>"Solid"</i> - <b>Matthew Swart</b><br/>&nbsp;&nbsp;<small>Owner @Safarinow</small><br/>
 			</p>
 		</div>
-	</div>		
 
-	<div class="section">
 		<div class="stint">
 			<h1>Web Development</h1>
 			<p>October 2006 – October 2007</p>
@@ -398,9 +357,7 @@
 				<i>"High Integrity"</i> - <b>Clifford Boobyer</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small><br/>
 			</p>
 		</div>
-	</div>	
 
-	<div class="section">
 		<div class="stint">
 			<h1>Usability Consultant</h1>
 			<p>September 2006 – October 2006</p>
@@ -410,9 +367,7 @@
 				<i>"Good Guy"</i> - <b>Gareth Knight</b><br/>&nbsp;&nbsp;<small>CTO @Kindo</small><br/>
 			</p>
 		</div>
-	</div>		
 
-	<div class="section">
 		<div class="stint">
 			<h1>User Interface Development</h1>
 			<p>April 2005 – August 2006</p>
@@ -421,9 +376,7 @@
 				<i>"Gets the job done!"</i> - <b>John Kleeman</b><br/>&nbsp;&nbsp;<small>Owner @Questionmark</small><br/>
 			</p>
 		</div>
-	</div>		
 
-	<div class="section">
 		<div class="stint">
 			<h1>Web Development</h1>
 			<p>April 2004 – March 2005</p>
@@ -433,9 +386,7 @@
 				<i>"Competent"</i> - <b>Fraser Black</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small><br/>
 			</p>
 		</div>
-	</div>	
 
-	<div class="section">
 		<div class="stint">
 			<h1>Java Development</h1>
 			<p>August 2002 – March 2004</p>
@@ -445,9 +396,7 @@
 				<i>"Great Spirit"</i> - <b>Jonathan Kimber</b><br/>&nbsp;&nbsp;<small>CTO @Telepassport</small><br/>
 			</p>
 		</div>
-	</div>		
 
-	<div class="section">
 		<div class="stint">
 			<h1>PHP Development</h1>
 			<p>March 2002 – July 2002</p>
@@ -457,9 +406,7 @@
 				<i>"Consistent"</i> - <b>Hugh Mckensie</b><br/>&nbsp;&nbsp;<small>CTO @DJDownload</small><br/>
 			</p>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 			<h1>Usability Testing</h1>
 			<p>December 2001 – March 2002</p>
@@ -469,9 +416,7 @@
 				<i>"Happy Chappy"</i> - <b>Andrew Philp</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small><br/>
 			</p>
 		</div>
-	</div>
 
-	<div class="section">
 		<div class="stint">
 			<h1>Game Testing</h1>
 			<p>June 2000 – Feburary 2001</p>
@@ -481,29 +426,83 @@
 				<i>"Good Bloke"</i> - <b>Sheldon Damons</b><br/>&nbsp;&nbsp;<small>Team Leader @SEGA</small><br/>
 			</p>
 		</div>
-	</div>
+
+
+	</div>	
+
 
 
 
 </div>
 
-<script>
-	$('#fullpage').fullpage({
-		anchors: ['n0', 'n25','n1', 'n2', 'n3', 'n4', 'n27', 'n5', 'n6', 'n61', 'n7', 'n8', 'n9', 'n10', 'n11', 'n12',
-		'n13',
-		'n14',
-		'n15',
-		'n16',
-		'n17',
-		'n18',
-		'n19',
-		'n20',
-		'n21',
-		'n22',
-		'n23',
-		'n24'],
-		menu: '#myMenu'
-	});
+		<div class="stint" 	>
+			
+				<h1 class="compact-h1">fengui</h1>
+				<p class="compact-p" style="">
+					
+					language &amp; framework agnostic<br/>
+					we help shape digital stuff<br/></p>		
+
+			
+		</div>
+
+
+
+
+
+  <script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(function() {
+
+
+       $('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: false,
+  centerMode: true,
+  focusOnSelect: true,
+   responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+    })();
+
+
 </script>
+
+</div>
 </body>
 </html>
