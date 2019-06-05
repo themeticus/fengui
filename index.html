@@ -5,509 +5,293 @@
 	<title>fengui by themeticus</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://themeticus.github.io/021/media/img/1ove.ico">
 	<script src="js/jquery/dist/jquery.min.js"></script>
-
-		<link rel="stylesheet" type="text/css" href="css/slick.css">
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-
-	<style>
-
-
-		@font-face {
-			/* this is my very own font, hacked from someone else's very own font...   */
-		  font-family: 'onelove';
-		  src:  url("fonts/1ove.ttf") format("ttf"), 
-		        url("fonts/1ove.woff") format("woff"); }
-		        body {
-		  margin: 0;
-		  font-family:  onelove, courier, arial, helvetica;
-		  color: #000;
-		}
-
-		strong, small, span, em, a {
-		  display: inline-block;
-		}
-
-		a {
-		  text-decoration: none;
-		  outline: none;
-		  color: orange; 
-		}
-
-		h1 {
-		    font-family: inherit;
-		    font-size: 1.4em;
-		    margin: 0 0 20px -20px;
-		    font-weight: normal;
-		    color: #fff;
-		    background: black;
-		    width: fit-content;
-		    padding: 10px 20px;
-		    border-radius: 0 3px 3px 0;
-		}
-
-
-		.stint>p:first-of-type {
-			font-size: 14px;
-    		text-transform: uppercase;
-    		color: #999 !important;
-		}
-
-		.insight {
-			font-size: 1.4em;
-		}
-
-
-
-		.active>a {
-			color: white !important;
-			background-color: black;
-			border-radius: 3px 0 0 3px;
-			padding: 2% 6% !important;
-		}
-
-		@media only screen and (max-width: 400px) {
-		  .content {
-		    
-		  }
-		}  
-
-
-		 .compact-h1 {
-    position: fixed;
-    bottom: 115px;
-    left: 0px;
-    padding: 12px 20px;
-    margin: 0 0 0;
-    border-radius: 0;
-    font-size: 2em;
-		 }
-
-		 .compact-p {
-    position: fixed;
-    background-color: black;
-    color: white;
-    padding: 10px 20px 11px;
-    border-radius: 0 3px 3px 0;
-    bottom: 99px;
-    left: 105px;
-    line-height: 1.2em;
-		 }
-
-		 .section {
-
-		 	background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;      width: 100%;
-    height: 100%;
- 
-
-		 }
-
-		 .stint {
-		 	    width: calc(65% - 40px) !important;
-    background: white;
-    padding: 20px;
-    opacity: 0.8
-		 }
-
-		 .partner {
-		 	display: block;
-		 	padding: 10px 0;
-		 	background: orange;
-		 	color: black;
-		 	text-align: center;
-		 	cursor: pointer;
-		 }
-
-		 .slider-nav .slick-current {
-		 	background-color: black !important;
-		 	color: white !important;
-		 }
-
-		 .slick-prev {
-    left: 10px !important;
-}
-
-.slick-next {
-    right: 10px !important;
-}
-
-.slick-prev, .slick-next {
-	bottom: 0px !important;
-	z-index: 99999 !important
-}
-
-.slick-current .partner {
-	background: black !important;
-	color:white !important;	
-}
-
-	</style>
-
-
+	<script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 </head>
-<body style="background-image: url(img/hugh-mosno.jpg); background-size: cover;background-position: 50% 0%; height: 100vh">
+
+<body>
 
 <div class="section">
 
+	<div class="tandem">
 
-
-<div style="position: fixed; top: 0px; left: 0; width: 100%; z-index: 9999 !important  ">
-
-
-	<div class="slider slider-nav" style="margin: 1px 0 0 0;">
-	    <div class="partner"> CMA </div>
-	    <div class="partner"> Imagemakers </div>
-	    <div class="partner"> CodeSpace	</div>
-<!-- 	    <div class="partner"> Inc Blue	</div> -->
-	    <div class="partner"> Brownie&nbsp;Points	</div>
-	    <div class="partner"> The&nbsp;Bike&nbsp;Pickup	</div>
-	    <div class="partner"> Unboxed	</div>
-	    <div class="partner"> Henosis	</div>
-	    <div class="partner"> Big Ambitions	</div>
-	    <div class="partner"> Lightspeed	</div>
-	    <div class="partner"> Fireworkx	</div>
-	    <div class="partner"> Aqua Online	</div>
-	    <div class="partner"> Awards	</div>
-	    <div class="partner"> Naspers	</div>
-	    <div class="partner"> MIH	</div>
-	    <div class="partner"> Praekelt	</div>
-	    <div class="partner"> Lightspeed	</div>
-	    <div class="partner"> DA	</div>
-	    <div class="partner"> Safarinow	</div>
-	    <div class="partner"> Firedog Design	</div>
-	    <div class="partner"> Kindo	</div>
-	    <div class="partner"> Questionmark	</div>
-	    <div class="partner"> Firedog Design	</div>
-	    <div class="partner"> Telepassport	</div>
-	    <div class="partner"> DJ Download	</div>
-	    <div class="partner"> Firedog Design	</div>
-	    <div class="partner"> SEGA	</div>
-	</div>
-
-
-
-	<div class="slider slider-for" style=" margin:1px 0 0 0;  " >
-
-
-
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>June 2018 - December 2018</p>			
-			<p class="insight">Retrofitting uniformity to the user experience &amp; underlying interface of <a href="https://www.cmainfo.co.za">CMA</a>'s market analysis application. We were tasked with modernizing the front end experience and spent a huge chunk of time developing working prototypes to showcase potential UX or UI enhancements.</p>
-			
-						<p><i>"Resourceful"</i> - <b>Owen Chakauya</b><br/>&nbsp;&nbsp;<small>Developer @CMA</small><br/></p>
+		<div class="slider slider-nav">
+		    <div class="partner"> CMA </div>
+		    <div class="partner"> Imagemakers </div>
+		    <div class="partner"> CodeSpace	</div>
+		    <div class="partner"> Brownie&nbsp;Points	</div>
+		    <div class="partner"> The&nbsp;Bike&nbsp;Pickup	</div>
+		    <div class="partner"> Unboxed	</div>
+		    <div class="partner"> Henosis	</div>
+		    <div class="partner"> Big Ambitions	</div>
+		    <div class="partner"> Lightspeed	</div>
+		    <div class="partner"> Fireworkx	</div>
+		    <div class="partner"> Aqua Online	</div>
+		    <div class="partner"> Awards	</div>
+		    <div class="partner"> Naspers	</div>
+		    <div class="partner"> MIH	</div>
+		    <div class="partner"> Praekelt	</div>
+		    <div class="partner"> Lightspeed	</div>
+		    <div class="partner"> DA	</div>
+		    <div class="partner"> Safarinow	</div>
+		    <div class="partner"> Firedog Design	</div>
+		    <div class="partner"> Kindo	</div>
+		    <div class="partner"> Questionmark	</div>
+		    <div class="partner"> Firedog Design	</div>
+		    <div class="partner"> Telepassport	</div>
+		    <div class="partner"> DJ Download	</div>
+		    <div class="partner"> Firedog Design	</div>
+		    <div class="partner"> SEGA	</div>
 		</div>
 
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>January 2018 - June 2018</p>			
-			<p class="insight">A mixture of Custom Javascript and Wordpress Templates. Built using Vue/NUXT on the front-end, talking to a headless Wordpress CMS. Using analytics and user feedback as a guide, we began prototyping fully functional layouts, forms, navigational elements &amp; menus as the starting point. Once stress-tested and approved, the components were composed into templates and retrofitted with the overall visual strategy.</p>
-			
-				<a href="https://bitbucket.org/imagemakers/imagemakers.bitbucket.io/src/master/" target="_blank">view source on bitbucket</a>
-		</div>
+		<div class="slider slider-for">
 
-		<div class="stint">
-			<h1>Lecturing</h1>
-			<p>September 2017 - December 2018</p>					
-			<p class="insight">Contracted by <a href="http://codespace.co.za/">CodeSpace</a> to Lecture at <a href="http://lifechoices.co.za/">Life Choices</a>. The opportunity to shape young, tech-savvy minds is something that pays in bucketloads. When you stop selling the industry and start sharing insights, you get a chance to equip eager minds not only with skills for software development, but also the soft skills missing from many development environments across the planet.</p>
-			
-			<p><i>"Positive &amp; Knowledgeable"</i> - <b>Stefan Louw</b><br/>&nbsp;&nbsp;<small>Founder @CodeSpace</small><br/></p>
-		</div>
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>June 2018 - December 2018</p>			
+				<p class="insight">Retrofitting uniformity to the user experience &amp; underlying interface of <a href="https://www.cmainfo.co.za">CMA</a>'s market analysis application. We were tasked with modernizing the front end experience and spent a huge chunk of time developing working prototypes to showcase potential UX or UI enhancements.</p>
+				<p><i>"Resourceful"</i> - <b>Owen Chakauya</b><br/>&nbsp;&nbsp;<small>Developer @CMA</small><br/></p>
+			</div>
 
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>January 2018 - June 2018</p>			
+				<p class="insight">A mixture of Custom Javascript and Wordpress Templates. Built using Vue/NUXT on the front-end, talking to a headless Wordpress CMS. Using analytics and user feedback as a guide, we began prototyping fully functional layouts, forms, navigational elements &amp; menus as the starting point. Once stress-tested and approved, the components were composed into templates and retrofitted with the overall visual strategy.</p>
+				<p><a href="https://bitbucket.org/imagemakers/imagemakers.bitbucket.io/src/master/" target="_blank">view source on bitbucket</a></p>
+			</div>
 
-<!-- 		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>August 2017 - September 2017</p>					
-			<p class="insight">Front End Support for <a href="http://incendiaryblue.com/">Incendiary Blue</a>. Updating templates for <a href="https://www.thomascookairlines.com/">Thomas Cook</a> with bits and bobs here and there.</p>
+			<div class="stint">
+				<h1>Lecturing</h1>
+				<p>September 2017 - December 2018</p>					
+				<p class="insight">Contracted by <a href="http://codespace.co.za/">CodeSpace</a> to Lecture at <a href="http://lifechoices.co.za/">Life Choices</a>. The opportunity to shape young, tech-savvy minds is something that pays in bucketloads. When you stop selling the industry and start sharing insights, you get a chance to equip eager minds not only with skills for software development, but also the soft skills missing from many development environments across the planet.</p>
+				
+				<p><i>"Positive &amp; Knowledgeable"</i> - <b>Stefan Louw</b><br/>&nbsp;&nbsp;<small>Founder @CodeSpace</small><br/></p>
+			</div>
 
-			<p><small>@Agency</small><br/></p>
-			
-		</div> -->
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>June 2017 - August 2017</p>					
+				<p class="insight">Front End Support for <a href="https://www.brownie-points.co.za/">Brownie Points</a>, updating styles, modifying templates and bug-fixing. </p>
+				</p><i>"A special human"</i> - <b>Pascale Henke</b><br/>&nbsp;&nbsp;<small>Owner @BrowniePoints</small><br/>
+			</div>
 
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>June 2017 - August 2017</p>					
-			<p class="insight">Front End Support for <a href="https://www.brownie-points.co.za/">Brownie Points</a>, updating styles, modifying templates and bug-fixing. </p>
-			
-			</p><i>"A special human"</i> - <b>Pascale Henke</b><br/>&nbsp;&nbsp;<small>Owner @BrowniePoints</small><br/>
-		</div>
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>May 2019</p>	
+				<p class="insight">One page Wordpress theme customization for <a href="http://thebikepickup.co.za/">thebikepickup</a>.</p>
+				<p><i>"Patient &amp; Professional"</i> - <b>Brian Liederman</b><br/>&nbsp;&nbsp;<small>Owner @LiederExpress</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>May 2019</p>	
-			<p class="insight">
-				One page Wordpress theme customization for <a href="http://thebikepickup.co.za/">thebikepickup</a>.
-			</p>
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>June 2016 - June 2017</p>
+				<p class="insight">Front end maintenance of <a href="https://onlineinvesting.sanlam.co.za/">Sanlam’s Online Investing portal</a>. Updating style guides and providing <a href="https://bellryck.sanlam.co.za/">customisation</a> for the white-labelled version of their application. We also provided CSS &amp; JS support for <a href="https://www.augmento.ai/">Augmento</a>, running their own custom Ruby on Rails application. <a href="https://unboxed.co/">Unboxed</a> Cape Town is a production house managed from London.</p>			
+				<p><i>"Highly Adaptable"</i> - <b>Carlo Kruger</b><br/>&nbsp;&nbsp;<small>Development Manager @Unboxed</small></p>
+			</div>
 
-			<p><i>"Patient &amp; Professional"</i> - <b>Brian Liederman</b><br/>&nbsp;&nbsp;<small>Owner @LiederExpress</small></p>
-		</div>
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>January 2016 - May 2016</p>
+				<p class="insight">
+					Still boasting a modern feel after many years. Completely coded from scratch, this custom design and development for <a href="https://themeticus.github.io/onelove/">Project One Love</a> was truly a labour of love. 
+				</p>
+				<i>"Jitz"</i> - <b>Hugh Mosno</b><br/>&nbsp;&nbsp;<small>Curator @ProjectOneLove</small><br/><br/>
+				<a href="https://github.com/themeticus/onelove" target="_blank">view source on github</a><br/>
+			</div>
 
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>June 2016 - June 2017</p>
-			<p class="insight">Front end maintenance of <a href="https://onlineinvesting.sanlam.co.za/">Sanlam’s Online Investing portal</a>. Updating style guides and providing <a href="https://bellryck.sanlam.co.za/">customisation</a> for the white-labelled version of their application. We also provided CSS &amp; JS support for <a href="https://www.augmento.ai/">Augmento</a>, running their own custom Ruby on Rails application. <a href="https://unboxed.co/">Unboxed</a> Cape Town is a production house managed from London.</p>
-			
-			<p>
-				<i>"Highly Adaptable"</i> - <b>Carlo Kruger</b><br/>&nbsp;&nbsp;<small>Development Manager @Unboxed</small><br/>
-			</p>
-		</div>
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>September 2015 - December 2015</p>
+				<p class="insight">
+					CSS Wrangler for <a href="https://bigambitions.co.za/">Big Ambitions</a> and <a href="http://checkedin.co.za/">CheckedIn</a>, including HTML template and newsletter mods.
+				</p><i>"Strategic"</i> - <b>Natalia Rosa</b><br/>&nbsp;&nbsp;<small>Director @Big Ambitions</small><br/>
+			</div>
 
-		<div class="stint">
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>August 2014 - August 2015</p>
+				<p class="insight">Improving the UX of client websites and responsible for anything and everything on the front end. <a href="https://www.lsdev.biz/">Lightspeed</a> is a Wordpress house that operate as a distributed team, working mainly within the hospitality industry. Favourite projects were <a href="https://www.maisonnoir.co.za/">Maison Noir</a>, <a href="https://www.duinepos.co.za/">Duinepos</a> and <a href="https://www.cityscapesdigital.net/">CityScapes</a></p>
+				<p><i>"Team Player"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
+			</div>
 
-			<h1>Front End Development</h1>
-			<p>January 2016 - May 2016</p>
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>June 2014 - August 2014</p>			
+				<p class="insight">Tasked with tackling a backlog of features and maintenance requests for Sanlam's SanPort application. <a href="https://fireworkx.com/">Fireworkx</a> boasts one of the tightest development teams we've come across.</p>
+				<p><i>"Reliable"</i> - <b>Oluwafemi Otusanya</b><br/>&nbsp;&nbsp;<small>Developer @Fireworkx</small></p>
+			</div>
 
-			<p class="insight">
-				Still boasting a modern feel after many years. Completely coded from scratch, this custom design and development for <a href="https://themeticus.github.io/onelove/">Project One Love</a> was truly a labour of love. 
-			</p>
-			<i>"Jitz"</i> - <b>Hugh Mosno</b><br/>&nbsp;&nbsp;<small>Curator @ProjectOneLove</small><br/><br/>
-			<a href="https://github.com/themeticus/onelove" target="_blank">view source on github</a><br/>
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>June 2012 - August 2014</p>			
+				<p class="insight">A few responsive HTML email templates, some microsites and other bits and bops on the front end. <a href="http://aquaonline.com/">Aqua</a> Cape Town closed their doors late in 2014 but the agency is alive and well. Outside of the above we implemented feature requsts and provided on-going maintenance for <a href="https://www.pnp.co.za">Pick 'n Pay</a> and a few other clients in their portoflio.<br/>
+				<p><i>"Legend"</i> - <b>Craig Bartlett</b><br/>&nbsp;&nbsp;<small>RAD Developer @AquaOnline</small></p>
+			</div>
 
-		</div>
+			<div class="stint">
+				<h1>Web Development</h1>
+				<p>January 2011 - June 2012</p>			
+				<p class="insight">A never-ending churning of campaign specific microsites, mobisites and websites for <a href="http://awards.co.za/">Achievement Awards'</a> various clients.<br/>			
+				<p><i>"An Asset"</i> - <b>Roger Ingarfield</b><br/>&nbsp;&nbsp;<small>Creative Director @Achievment Awards</small></p>
+			</div>
 
-		<div class="stint">
-
-			<h1>Front End Development</h1>
-			<p>September 2015 - December 2015</p>
-
-			<p class="insight">
-				CSS Wrangler for <a href="https://bigambitions.co.za/">Big Ambitions</a> and <a href="http://checkedin.co.za/">CheckedIn</a>, including HTML template and newsletter mods.
-			</p><i>"Strategic"</i> - <b>Natalia Rosa</b><br/>&nbsp;&nbsp;<small>Director @Big Ambitions</small><br/>
-
-		</div>
-
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>August 2014 - August 2015</p>
-			<p class="insight">Improving the UX of client websites and responsible for anything and everything on the front end. <a href="https://www.lsdev.biz/">Lightspeed</a> is a Wordpress house that operate as a distributed team, working mainly within the hospitality industry. Favourite projects were <a href="https://www.maisonnoir.co.za/">Maison Noir</a>, <a href="https://www.duinepos.co.za/">Duinepos</a> and <a href="https://www.cityscapesdigital.net/">CityScapes</a></p>
-			
-			<p><i>"Team Player"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
-		</div>
-
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>June 2014 - August 2014</p>			
-			<p class="insight">Tasked with tackling a backlog of features and maintenance requests for Sanlam's SanPort application. <a href="https://fireworkx.com/">Fireworkx</a> boasts one of the tightest development teams we've come across.</p>
-			
-			<p><i>"Reliable"</i> - <b>Oluwafemi Otusanya</b><br/>&nbsp;&nbsp;<small>Development Lead @Fireworkx</small></p>
-		</div>
-
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>June 2012 - August 2014</p>			
-			<p class="insight">A few responsive HTML email templates, some microsites and other bits and bops on the front end. <a href="http://aquaonline.com/">Aqua</a> Cape Town closed their doors late in 2014 but the agency is alive and well. Outside of the above we implemented feature requsts and provided on-going maintenance for <a href="https://www.pnp.co.za">Pick 'n Pay</a> and a few other clients in their portoflio.<br/>
-			
-			<p><i>"Legend"</i> - <b>Craig Bartlett</b><br/>&nbsp;&nbsp;<small>RAD Developer @AquaOnline</small></p>
-		</div>
-
-		<div class="stint">
-			<h1>Web Development</h1>
-			<p>January 2011 - June 2012</p>			
-			<p class="insight">A never-ending churning of campaign specific microsites, mobisites and websites for <a href="http://awards.co.za/">Achievement Awards'</a> various clients.<br/>			
-			<p><i>"An Asset"</i> - <b>Roger Ingarfield</b><br/>&nbsp;&nbsp;<small>Creative Director @Achievment Awards</small></p>
-		</div>
-
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>July 2010 - December 2010</p>		
-			<p class="insight">Contracted during the transition from .net to .com. <a href="http://kalahari.net">Kalahari</a> was a brief contract to help ease the surge in internal development traffic during the transition phase. We gained considerable sight working with <a href="https://www.hybris.com/en/">Hybris</a>, their e-commerce platform of choice.
-			</p>		
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>July 2010 - December 2010</p>		
+				<p class="insight">Contracted during the transition from .net to .com. <a href="http://kalahari.net">Kalahari</a> was a brief contract to help ease the surge in internal development traffic during the transition phase. We gained considerable sight working with <a href="https://www.hybris.com/en/">Hybris</a>, their e-commerce platform of choice.
+				</p>		
 				<p><i>via</i> - <b>Michael Needham</b><br/>&nbsp;<small>Development Manager @Kalahari</small></p>
-		</div>
+			</div>
 
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>March 2010 - June 2010</p>		
-			<p class="insight">Working in a small team, we were focused on component development &amp; documentation for their upgrade from 1.0 to <a href="http://pricecheck.com">Pricecheck 2.0</a>.</p>
-			<p><i>via</i> - <b>Chris Tucker</b><br/>&nbsp;<small>Owner @Pricecheck</small></p>
-			
-		</div>
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>March 2010 - June 2010</p>		
+				<p class="insight">Working in a small team, we were focused on component development &amp; documentation for their upgrade from 1.0 to <a href="http://pricecheck.com">Pricecheck 2.0</a>.</p>
+				<p><i>via</i> - <b>Chris Tucker</b><br/>&nbsp;<small>Owner @Pricecheck</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>Front End Development</h1>
-			<p>March 2010 - June 2010</p>		
-			<p class="insight">A brief stint with <a href="https://www.praekelt.com/">Praekelt</a> to flesh out the then newly designed interface for <a href="https://kfc.co.za/">KFC</a>. </p>
-			<p><i>via</i> - <b>Ryan Thom</b><br/>&nbsp;<small>Developer @Praekelt</small></p>
-					
-		</div>
+			<div class="stint">
+				<h1>Front End Development</h1>
+				<p>March 2010 - June 2010</p>		
+				<p class="insight">A brief stint with <a href="https://www.praekelt.com/">Praekelt</a> to flesh out the then newly designed interface for <a href="https://kfc.co.za/">KFC</a>. </p>
+				<p><i>via</i> - <b>Ryan Thom</b><br/>&nbsp;<small>Developer @Praekelt</small></p>	
+			</div>
 
-		<div class="stint">
-			<h1>Interface Development</h1>
-			<p>September 2009 - February 2010</p>
-			<p class="insight">Custom Wordpress theme development, plugin modifications &amp; HTML newsletters was the core of our focus. We landed this contract after a very successful roll-out of our work done in previous months with the <a href="https://www.da.org.za/">Democratic Alliance</a>.</p>
-			
-			<p><i>"Team Player"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
-		</div>
+			<div class="stint">
+				<h1>Interface Development</h1>
+				<p>September 2009 - February 2010</p>
+				<p class="insight">Custom Wordpress theme development, plugin modifications &amp; HTML newsletters was the core of our focus. We landed this contract after a very successful roll-out of our work done in previous months with the <a href="https://www.da.org.za/">Democratic Alliance</a>.</p>
+				<p><i>"Team Player"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>Usability Consultant</h1>
-			<p>May 2009 - September 2009</p>
-			<p class="insight">Contracted by <a href="https://www.lsdev.biz/">Lightspeed</a> to work with the <a href="https://www.da.org.za/">Democratic Alliance</a> to produce a 120 page low-fidelity, but fully functional prototype, that would be used as the wireframe to roll out their then Volunteer Outreach Program.</p>
-			
-			<p><i>"Creative"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
-		</div>
+			<div class="stint">
+				<h1>Usability Consultant</h1>
+				<p>May 2009 - September 2009</p>
+				<p class="insight">Contracted by <a href="https://www.lsdev.biz/">Lightspeed</a> to work with the <a href="https://www.da.org.za/">Democratic Alliance</a> to produce a 120 page low-fidelity, but fully functional prototype, that would be used as the wireframe to roll out their then Volunteer Outreach Program.</p>
+				<p><i>"Creative"</i> - <b>Ashley Shaw</b><br/>&nbsp;&nbsp;<small>Owner @Lightspeed</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>User Interface Development</h1>
-			<p>November 2007 - April 2009</p>
-			<p class="insight">Established a style guide and refactored legacy code into semantically beautiful mark-up across hundreds of pages and templates. The <a href="https://www.safarinow.com/">Safarinow</a> development team surfs during breaks, how cool is that?</a></p>
-			
-			<p>
-				<i>"Solid"</i> - <b>Matthew Swart</b><br/>&nbsp;&nbsp;<small>Owner @Safarinow</small><br/>
-			</p>
-		</div>
+			<div class="stint">
+				<h1>User Interface Development</h1>
+				<p>November 2007 - April 2009</p>
+				<p class="insight">Established a style guide and refactored legacy code into semantically beautiful mark-up across hundreds of pages and templates. The <a href="https://www.safarinow.com/">Safarinow</a> development team surfs during breaks, how cool is that?</a></p>
+				<p><i>"Solid"</i> - <b>Matthew Swart</b><br/>&nbsp;&nbsp;<small>Owner @Safarinow</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>Web Development</h1>
-			<p>October 2006 – October 2007</p>
-			<p class="insight">Acting as a bridge between the design studio and the development team remotely. We have been working on and off with <a href="http://www.firedog.co.uk/">Firedog</a> for many years. </p>
-			
-			<p>
-				<i>"High Integrity"</i> - <b>Clifford Boobyer</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small><br/>
-			</p>
-		</div>
+			<div class="stint">
+				<h1>Web Development</h1>
+				<p>October 2006 – October 2007</p>
+				<p class="insight">Acting as a bridge between the design studio and the development team remotely. We have been working on and off with <a href="http://www.firedog.co.uk/">Firedog</a> for many years. </p>			
+				<p><i>"High Integrity"</i> - <b>Clifford Boobyer</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>Usability Consultant</h1>
-			<p>September 2006 – October 2006</p>
-			<p class="insight">Kindo.com are now <a href="https://www.myheritage.com/">My Heritage</a>. The brief was pretty much "<b>how can we make this thing better...</b>" - using common sense we fleshed out our thinking with HTML and CSS. <br/></p>
-			
-			<p>
-				<i>"Good Guy"</i> - <b>Gareth Knight</b><br/>&nbsp;&nbsp;<small>CTO @Kindo</small><br/>
-			</p>
-		</div>
+			<div class="stint">
+				<h1>Usability Consultant</h1>
+				<p>September 2006 – October 2006</p>
+				<p class="insight">Kindo.com are now <a href="https://www.myheritage.com/">My Heritage</a>. The brief was pretty much "<b>how can we make this thing better...</b>" - using common sense we fleshed out our thinking with HTML and CSS. <br/></p>			
+				<p><i>"Good Guy"</i> - <b>Gareth Knight</b><br/>&nbsp;&nbsp;<small>CTO @Kindo</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>User Interface Development</h1>
-			<p>April 2005 – August 2006</p>
-			<p class="insight">  At <a href="https://www.questionmark.com/">Questionmark</a> we worked closely with the various development teams to ensure designs were implemented correctly and to help resolve implementation hiccups. We produced designs and user stories for the development team using paper prototyping as wire-frames. Completed projects include over 50 prototypes, 11 of which are fully functional interfaces still in commercial use today. </p>
-			<p>
-				<i>"Gets the job done!"</i> - <b>John Kleeman</b><br/>&nbsp;&nbsp;<small>Owner @Questionmark</small><br/>
-			</p>
-		</div>
+			<div class="stint">
+				<h1>User Interface Development</h1>
+				<p>April 2005 – August 2006</p>
+				<p class="insight">  At <a href="https://www.questionmark.com/">Questionmark</a> we worked closely with the various development teams to ensure designs were implemented correctly and to help resolve implementation hiccups. We produced designs and user stories for the development team using paper prototyping as wire-frames. Completed projects include over 50 prototypes, 11 of which are fully functional interfaces still in commercial use today. </p>
+				<p><i>"Gets the job done!"</i> - <b>John Kleeman</b><br/>&nbsp;&nbsp;<small>Owner @Questionmark</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>Web Development</h1>
-			<p>April 2004 – March 2005</p>
-			<p class="insight">Converting PSD-to-HTML, testing these implementations cross browser and then passing it off to third party developers for integration. This was also our first stint with proper documentation, used mainly to ease the communications betweeen design and development departments.<br/></p>
-			
-			<p>
-				<i>"Competent"</i> - <b>Fraser Black</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small><br/>
-			</p>
-		</div>
+			<div class="stint">
+				<h1>Web Development</h1>
+				<p>April 2004 – March 2005</p>
+				<p class="insight">Converting PSD-to-HTML, testing these implementations cross browser and then passing it off to third party developers for integration. This was also our first stint with proper documentation, used mainly to ease the communications betweeen design and development departments.<br/></p>			
+				<p><i>"Competent"</i> - <b>Fraser Black</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>Java Development</h1>
-			<p>August 2002 – March 2004</p>
-			<p class="insight">Telepassport are now <a href="http://www.hugetelecom.co.za/">Huge Telecom</a>. My first encounter with Servlets and JSP. Never really took to Java. It would be Javascript though in the end, that would steal my heart.<br/></p>
-			
-			<p>
-				<i>"Good Spirit"</i> - <b>Jonathan Kimber</b><br/>&nbsp;&nbsp;<small>CTO @Telepassport</small><br/>
-			</p>
-		</div>
+			<div class="stint">
+				<h1>Java Development</h1>
+				<p>August 2002 – March 2004</p>
+				<p class="insight">Telepassport are now <a href="http://www.hugetelecom.co.za/">Huge Telecom</a>. My first encounter with Servlets and JSP. Javascript though in the end would be my true love.<br/></p>			
+				<p><i>"Good Spirit"</i> - <b>Jonathan Kimber</b><br/>&nbsp;&nbsp;<small>CTO @Telepassport</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>PHP Development</h1>
-			<p>March 2002 – July 2002</p>
-			<p class="insight">DJ Download no longer exists. It was a crash and burn project from the guys at <a href="https://djmag.com//">DJ Mag UK</a>. Some PHP templates and a bit of tinkering.<br/></p>
-			
-			<p>
-				<i>"Consistent"</i> - <b>Hugh Mckensie</b><br/>&nbsp;&nbsp;<small>CTO @DJDownload</small><br/>
-			</p>
-		</div>
+			<div class="stint">
+				<h1>PHP Development</h1>
+				<p>March 2002 – July 2002</p>
+				<p class="insight">DJ Download no longer exists. It was a crash and burn project from the guys at <a href="https://djmag.com//">DJ Mag UK</a>. Some PHP templates and a bit of tinkering.<br/></p>
+				<p><i>"Consistent"</i> - <b>Hugh Mckensie</b><br/>&nbsp;&nbsp;<small>CTO @DJDownload</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>Usability Testing</h1>
-			<p>December 2001 – March 2002</p>
-			<p class="insight">My first taste of Agency life at their trendy SOHO offices in London. <a href="https://uk.linkedin.com/in/cliffordboobyer">Cliff</a>, <a href="https://za.linkedin.com/in/fraserblackct">Fraser</a> and <a href="https://za.linkedin.com/in/andrew-philp-575b013">Andrew</a> introduced me to most of what I needed to know about the industry. Their insights stay with me still today. <br/></p>
-			
-			<p>
-				<i>"Happiness"</i> - <b>Andrew Philp</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small><br/>
-			</p>
-		</div>
+			<div class="stint">
+				<h1>Usability Testing</h1>
+				<p>December 2001 – March 2002</p>
+				<p class="insight">My first taste of Agency life at their trendy SOHO offices in London. <a href="https://uk.linkedin.com/in/cliffordboobyer">Cliff</a>, <a href="https://za.linkedin.com/in/fraserblackct">Fraser</a> and <a href="https://za.linkedin.com/in/andrew-philp-575b013">Andrew</a> introduced me to most of what I needed to know about the industry. Their insights stay with me still today. <br/></p>			
+				<p><i>"Happiness"</i> - <b>Andrew Philp</b><br/>&nbsp;&nbsp;<small>Owner @FiredogDesign</small></p>
+			</div>
 
-		<div class="stint">
-			<h1>Game Testing</h1>
-			<p>June 2000 – Feburary 2001</p>
-			<p class="insight">Before getting stuck into serious development we enjoyed an immersive experience at <a href="https://www.sega.co.uk/">SEGA</a> in Gunnersbury. Made loads of friends and got to really understand the product life cycle. <br/></p>
-		
-			<p>
-				<i>"Good Bloke"</i> - <b>Sheldon Damons</b><br/>&nbsp;&nbsp;<small>Team Leader @SEGA</small><br/>
-			</p>
-		</div>
+			<div class="stint">
+				<h1>Game Testing</h1>
+				<p>June 2000 – Feburary 2001</p>
+				<p class="insight">Before getting stuck into serious development we enjoyed an immersive experience at <a href="https://www.sega.co.uk/">SEGA</a> in Gunnersbury. Made loads of friends and got to really understand the product life cycle. <br/></p>		
+				<p><i>"Good Bloke"</i> - <b>Sheldon Damons</b><br/>&nbsp;&nbsp;<small>Team Leader @SEGA</small></p>
+			</div>
 
+		</div>	
 
-	</div>	
+	</div>
+				
+	<h1 class="compact-h1">fengui</h1>
+	<p class="compact-p">language &amp; framework agnostic<br/>we help shape digital stuff</p>	
 
+	<script>
 
+	  $(function() {
 
+	     	$('.slider-for').slick({
+				  slidesToShow: 1,
+				  slidesToScroll: 1,
+				  arrows: false,
+				  fade: true,
+				  asNavFor: '.slider-nav'
+				});
 
-</div>
+				$('.slider-nav').slick({
+				  slidesToShow: 9,
+				  slidesToScroll: 1,
+				  asNavFor: '.slider-for',
+				  dots: false,
+				  centerMode: true,
+				  focusOnSelect: true,
+				   responsive: [
+				    {
+				      breakpoint: 1024,
+				      settings: {
+				        slidesToShow: 6,
+				        slidesToScroll: 1,
+				        infinite: true,
+				        dots: false
+				      }
+				    },
+				    {
+				      breakpoint: 600,
+				      settings: {
+				        slidesToShow: 3,
+				        slidesToScroll: 1
+				      }
+				    },
+				    {
+				      breakpoint: 480,
+				      settings: {
+				        slidesToShow: 1,
+				        slidesToScroll: 1
+				      }
+				    }
+				  ]
+				});
+	  })();
 
-	
-			
-				<h1 class="compact-h1">fengui</h1>
-				<p class="compact-p" style="">
-					
-					language &amp; framework agnostic<br/>
-					we help shape digital stuff<br/></p>		
-
-			
-	
-
-
-
-
-
-  <script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(function() {
-
-
-       $('.slider-for').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-  slidesToShow: 9,
-  slidesToScroll: 1,
-  asNavFor: '.slider-for',
-  dots: false,
-  centerMode: true,
-  focusOnSelect: true,
-   responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: false
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-});
-    })();
-
-
-</script>
+	</script>
 
 </div>
+
 </body>
 </html>
