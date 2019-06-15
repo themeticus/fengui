@@ -9,8 +9,9 @@
 }
 
 body {
-    background-image: url(../img/hugh-mosno.jpg); 
+    background-image: none; 
     background-size: cover;
+    background-color: orange;
     background-position: 50% 0%; 
     height: 100vh
 }
@@ -54,11 +55,10 @@ h1 {
     padding: 2% 6% !important;
 }
 
-@media only screen and (max-width: 400px) {
-  .content {
-    /* for later, maybe */
-  }
-}  
+.bg {
+    background-image: url(../img/hugh-mosno.jpg);
+}
+
 
  .compact-h1 {
     position: fixed;
