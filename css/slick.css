@@ -81,6 +81,12 @@ h1 {
     line-height: 1.2em;
  }
 
+ .compact-p small {
+    font-size: .7em;
+    line-height: 1.2em;
+    text-transform: uppercase;
+ }
+
  .section {
         background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;      
         width: 100%;
