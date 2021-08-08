@@ -5,63 +5,10 @@
 	<meta name="viewport" content="width=device-width">
 	<title>fengui by themeticus</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://themeticus.github.io/021/media/img/1ove.ico">
-	<script src="js/jquery/dist/jquery.min.js"></script>
-	<script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<link rel="stylesheet" type="text/css" href="css/theme.css">
 
 	<script>
 
-		$(function () {
-
-			$('.slider-for').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				fade: true,
-				speed: 500,
-				asNavFor: '.slider-nav'
-			});
-
-			$('.slider-nav').slick({
-				slidesToShow: 9,
-				slidesToScroll: 1,
-				asNavFor: '.slider-for',
-				dots: false,
-				centerMode: true,
-				focusOnSelect: true,
-				responsive: [
-					{
-						breakpoint: 1024,
-						settings: {
-							slidesToShow: 6,
-							slidesToScroll: 1,
-							infinite: true,
-							dots: false
-						}
-					},
-					{
-						breakpoint: 600,
-						settings: {
-							slidesToShow: 3,
-							slidesToScroll: 1
-						}
-					},
-					{
-						breakpoint: 480,
-						settings: {
-							slidesToShow: 1,
-							slidesToScroll: 1
-						}
-					}
-				]
-			});
-
-			setTimeout(function () {
-				$('body').addClass('bg')
-			}, 5000);
-
-		})();
 
 	</script>
 
@@ -69,64 +16,49 @@
 
 <body>
 
-	<div class="section">
+	<div class="about">
+		<br/>
+		<h1><b>beep</b></h1>
+		<p> a tech stack agnostic digital stuff shaperer since 2001, contracting to clients locally and abroad, working on projects ranging from one page websites to mammoth legacy systems.
+		
+	</p>
+	</div>
 
-		<div class="tandem">
-
-			<div class="slider slider-nav">
-				<div class="partner"> SMS Portal </div>
-				<div class="partner"> CMA </div>
-				<div class="partner"> Imagemakers </div>
-				<div class="partner"> CodeSpace </div>
-				<div class="partner"> Brownie Points </div>
-				<div class="partner"> The Bike Pickup </div>
-				<div class="partner"> Unboxed </div>
-				<div class="partner"> Henosis </div>
-				<div class="partner"> Big Ambitions </div>
-				<div class="partner"> Lightspeed </div>
-				<div class="partner"> Fireworkx </div>
-				<div class="partner"> Aqua Online </div>
-				<div class="partner"> Awards </div>
-				<div class="partner"> Naspers </div>
-				<div class="partner"> MIH </div>
-				<div class="partner"> Praekelt </div>
-				<div class="partner"> Lightspeed </div>
-				<div class="partner"> DA </div>
-				<div class="partner"> Safarinow </div>
-				<div class="partner"> Firedog Design </div>
-				<div class="partner"> Kindo </div>
-				<div class="partner"> Questionmark </div>
-				<div class="partner"> Firedog Design </div>
-				<div class="partner"> Telepassport </div>
-				<div class="partner"> DJ Download </div>
-				<div class="partner"> Firedog Design </div>
-				<div class="partner"> SEGA </div>
-			</div>
-
-			<div class="slider slider-for">
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
+					<p>June 2020 - June 2021</p>
+					<p class="insight">
+						Design and development of high-fidelity prototypes for <a href="https://www.mediamonkeys.co.za">Media Monkeys</a>. Proposing UX and UI enhancements for <a href="https://www.bakedonline.co.za">their client</a>, starting with <a href="https://www.mediamonkeys.co.za/demo/bakedonline/">a static HTML, CSS and JS series of screens</a> which morphs into a semi-functional <a href="https://themeticus.github.io/focus/">Vue/NUXT PWA</a>. Technical Documentation, Maintenance, Mentoring and DevOps formed part of the domain of responsibilities. </p>
+
+
+
+					<p><i>"Indispensible"</i> - <b>Ighsaan Robinson</b><br />&nbsp;&nbsp;<small>Owner @MediaMonkeys</small><br /></p>
+				</div>
+
+
+				<div class="stint">
+					<h1>Frontend Dev</h1>
 					<p>March 2020 - May 2020</p>
 					<p class="insight">Improving the overall cohesiveness of the UX/UI of <a href="https://www.smsportal.com">SMS Portal</a>'s core client-facing
-						application, powered by a JAM'ish stack, based on MDB's Vue implementation. Focused on developing high-fidelity prototypes to demo improvements as well as continual system maintenance.</p>
-					<p><i>"Blown Away"</i> - <b>Brett Skinner</b><br />&nbsp;&nbsp;<small>Development Lead
+						application, powered by a JAM'ish stack, based on <a href="https://mdbootstrap.com/">MDB's Vue implementation</a>. Focused on developing high-fidelity prototypes to demo improvements as well as continual system maintenance.</p>
+					<p><i>"Blown Away"</i> - <b>Brett Skinner</b><br />&nbsp;&nbsp;<small>Dev Lead
 							@SMSPortal</small><br /></p>
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>June 2018 - December 2018</p>
 					<p class="insight">Retrofitting uniformity to the user experience &amp; underlying interface of <a
 							href="https://www.cmainfo.co.za">CMA</a>'s market analysis application. Tasked with
-						modernizing the front end experience and spent a huge chunk of time developing working
+						modernizing the Frontend experience and spent a huge chunk of time developing working
 						prototypes to showcase potential UX or UI enhancements.</p>
 					<p><i>"Resourceful"</i> - <b>Owen Chakauya</b><br />&nbsp;&nbsp;<small>Developer @CMA</small><br />
 					</p>
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>January 2018 - June 2018</p>
 					<p class="insight">A mixture of Custom Javascript and Wordpress Templates. Built using Vue/NUXT,
 						talking to a headless Wordpress CMS. Using analytics and user feedback as a guide, work began on
@@ -139,7 +71,7 @@
 				</div>
 
 				<div class="stint">
-					<h1>Lecturing</h1>
+					<h1>Lecturer</h1>
 					<p>September 2017 - December 2018</p>
 					<p class="insight">Contracted by <a href="http://codespace.co.za/">CodeSpace</a> to Lecture at <a
 							href="http://lifechoices.co.za/">Life Choices</a>. The opportunity to shape young,
@@ -153,16 +85,16 @@
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>June 2017 - August 2017</p>
-					<p class="insight">Front End Support for <a href="https://www.brownie-points.co.za/">Brownie
+					<p class="insight">Frontend Support for <a href="https://www.brownie-points.co.za/">Brownie
 							Points</a>, updating styles, modifying templates and bug-fixing. </p>
 					</p><i>"A special human"</i> - <b>Pascale Henke</b><br />&nbsp;&nbsp;<small>Owner
 						@BrowniePoints</small><br />
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>May 2019</p>
 					<p class="insight">One page Wordpress theme customization for <a
 							href="http://thebikepickup.co.za/">thebikepickup</a>.</p>
@@ -171,9 +103,9 @@
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>June 2016 - June 2017</p>
-					<p class="insight">Front end maintenance of <a href="https://onlineinvesting.sanlam.co.za/">Sanlam’s
+					<p class="insight">Frontend maintenance of <a href="https://onlineinvesting.sanlam.co.za/">Sanlam’s
 							Online Investing portal</a>. Updating style guides and providing <a
 							href="https://bellryck.sanlam.co.za/">customisation</a> for the white-labelled version of
 						their application. CSS &amp; JS support for <a href="https://www.augmento.ai/">Augmento</a>,
@@ -184,7 +116,7 @@
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>January 2016 - May 2016</p>
 					<p class="insight">
 						Still boasting a modern feel after many years. Completely coded from scratch, this custom design
@@ -197,7 +129,7 @@
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>September 2015 - December 2015</p>
 					<p class="insight">
 						CSS Wrangler for <a href="https://bigambitions.co.za/">Big Ambitions</a> and <a
@@ -207,10 +139,10 @@
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>August 2014 - August 2015</p>
 					<p class="insight">Improving the UX of client websites and responsible for anything and everything
-						on the front end. <a href="https://www.lsdev.biz/">Lightspeed</a> is a Wordpress house that
+						on the Frontend. <a href="https://www.lsdev.biz/">Lightspeed</a> is a Wordpress house that
 						operate as a distributed team, working mainly within the hospitality industry. Favourite
 						projects were <a href="https://www.maisonnoir.co.za/">Maison Noir</a>, <a
 							href="https://www.duinepos.co.za/">Duinepos</a> and <a
@@ -219,7 +151,7 @@
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>June 2014 - August 2014</p>
 					<p class="insight">Tasked with tackling a backlog of features and maintenance requests for Sanlam's
 						SanPort application. <a href="https://fireworkx.com/">Fireworkx</a> boasts one of the tightest
@@ -229,10 +161,10 @@
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>June 2012 - August 2014</p>
 					<p class="insight">A few responsive HTML email templates, some microsites and other bits and bops on
-						the front end. <a href="http://aquaonline.com/">Aqua</a> Cape Town closed their doors late in
+						the Frontend. <a href="http://aquaonline.com/">Aqua</a> Cape Town closed their doors late in
 						2014. Also implemented feature requsts and provided on-going maintenance for <a
 							href="https://www.pnp.co.za">Pick 'n Pay</a> and a few other clients in their
 						portoflio.<br />
@@ -250,7 +182,7 @@
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>July 2010 - December 2010</p>
 					<p class="insight">Contracted during the transition from .net to .com. <a
 							href="http://kalahari.net">Kalahari</a> was a brief contract to help ease the surge in
@@ -261,7 +193,7 @@
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>March 2010 - June 2010</p>
 					<p class="insight">Working in a small team focused on component development &amp; creating
 						documentation for their upgrade from 1.0 to <a href="http://pricecheck.com">Pricecheck 2.0</a>.
@@ -270,7 +202,7 @@
 				</div>
 
 				<div class="stint">
-					<h1>Front End Development</h1>
+					<h1>Frontend Dev</h1>
 					<p>March 2010 - June 2010</p>
 					<p class="insight">Briefly stinted with <a href="https://www.praekelt.com/">Praekelt</a> to flesh
 						out the then newly designed interface for <a href="https://kfc.co.za/">KFC</a>. </p>
@@ -384,16 +316,13 @@
 					<p><i>"Good Bloke"</i> - <b>Sheldon Damons</b><br />&nbsp;&nbsp;<small>Team Leader @SEGA</small></p>
 				</div>
 
-			</div>
+				<div class="bg">
+					<p>	
+						<span>Vue, Nuxt, Snipcart, Gimp, Git, LAMP, JAM, Wordpress, WooCommerce  </span>
+					</p>
+				</div>
 
-		</div>
 
-		<div class="about">
-			<h1 class="compact-h1">fengui</h1>
-			<p class="compact-p">tech stack agnostic<br />digital stuff shaperer</p>
-		</div>
-
-	</div>
 
 </body>
 
