@@ -19,6 +19,7 @@ body {
   margin: 0;
   font-family:  onelove, courier, arial, helvetica;
   color: #000;
+  background-color: #faead7;
 }
 
 strong, small, span, em, a {
@@ -101,6 +102,23 @@ h1 {
     border-left: 2px dotted #555;
 }
 
+.whobemewhenwebethree {
+    display: block;
+    background: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+.hilight {
+    background-color: orange;
+    color: #333;
+    padding: 5px;
+    margin: 0 0 0 5px;
+}
+
 .big {
     display: none;
   } 
@@ -110,3 +128,4 @@ h1 {
       display: block;
     }
   }
+
