@@ -78,7 +78,7 @@ h1 {
 }
 
 .experience {
-    margin: 200px 0;
+    margin: 200px 0 50px;
 }
 
 .spread {
@@ -108,7 +108,7 @@ h1 {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 10px;
+    padding: 0 0 0 5px;
   }
 
 .hilight {
