@@ -1,3 +1,14 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --dark-gray: #181919;
+    --light-gray: #cfcfcf;
+    --off-white: #f7f7f2;
+    --sml: clamp(150px, 100vw, 767px) / 428;
+    --lrg: clamp(768px, 100vw, 1920px) / 1920;
+    --tab: clamp(768px, 100vw, 1920px);
+}
+
 @font-face {
   font-family: 'onelove';
   src:  url("../fonts/1ove.ttf") format("ttf"), 
@@ -19,6 +30,7 @@ a {
   outline: none;
   color: #c27f05; 
 }
+
 
 h1 {
     font-family: inherit;
@@ -79,4 +91,22 @@ h1 {
     background-size: cover;
     background-color: orange;
     background-position: 50% 0%; 
+  }
+
+.side-note {
+    /* font-family: 'Courier New', Courier, monospace; */
+    color: #7c7979;
+    margin-left: 5px;
+    padding-left: 10px;
+    border-left: 2px dotted #555;
+}
+
+.big {
+    display: none;
+  } 
+
+@media (min-width: 768px) {
+    .big {
+      display: block;
+    }
   }
