@@ -1,12 +1,11 @@
 :root {
-    --black: #000000;
-    --white: #ffffff;
+    --black: #2e2e2e;
+    --white: #adadad;
     --dark-gray: #181919;
     --light-gray: #cfcfcf;
     --off-white: #f7f7f2;
-    --sml: clamp(150px, 100vw, 767px) / 428;
-    --lrg: clamp(768px, 100vw, 1920px) / 1920;
-    --tab: clamp(768px, 100vw, 1920px);
+    --num: calc(clamp(150px, 100vw, 1920px) / 428);
+    --min: calc(clamp(150px, 100vw, 768px) /428);
 }
 
 @font-face {
@@ -18,8 +17,8 @@
 body {
   margin: 0;
   font-family:  onelove, courier, arial, helvetica;
-  color: #000;
-  background-color: #faead7;
+  color: #adadad;
+  background-color: #2e2e2e;
 }
 
 strong, small, span, em, a {
@@ -38,13 +37,17 @@ h1 {
     font-size: 2.4em;
     margin: 300px 0 0 0;
     font-weight: normal;
-    color: #000 ;
     width: fit-content;
 }
 
 .about {
     font-size: 2rem;
     padding: 0 5%;
+
+    & img {
+      height: calc(var(--min) * 30);
+      filter: saturate(.5);
+    }
 }
 
 .stint>p:first-of-type {
@@ -53,6 +56,12 @@ h1 {
     color: #999;
     margin: 0;
     padding: 0;
+}
+
+.stint img {
+  height: calc(var(--min) * 15);
+  width: calc(var(--min) * 15);
+  filter: saturate(.5);
 }
 
 .insight {
@@ -104,7 +113,7 @@ h1 {
 .whobemewhenwebethree {
     display: block;
     background: black;
-    color: white;
+    color: #adadad;
     position: fixed;
     top: 0;
     left: 0;
@@ -114,8 +123,8 @@ h1 {
 .hilight {
     background-color: orange;
     color: #333;
-    padding: 5px;
-    margin: 0 0 0 5px;
+    padding: 5px 10px;
+    margin: 0 
 }
 
 .big {
@@ -128,3 +137,10 @@ h1 {
     }
   }
 
+.hidden {
+  display: none;
+}
+
+.previouslyOnLawAndOrder {
+  padding: 0 5%;
+}
