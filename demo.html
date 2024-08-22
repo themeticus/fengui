@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <input id="message" placeholder="Type your message" />
+    <button onclick="sendMessage()">Send</button>
+    <ul id="messages"></ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script>
+        const gun = Gun(['https://themeticus.github.io/fengui/'])
+        // const gun = Gun(['https://your-relay-server-url.com/gun']);
+        const messages = gun.get('messages');
+
+        messages.map().on(function (data, id) {
+            const li = document.createElement('li');
+            li.textContent = data;
+            document.getElementById('messages').appendChild(li);
+        });
+
+        function sendMessage() {
+            const msg = document.getElementById('message').value;
+            messages.set(msg);
+            document.getElementById('message').value = '';
+        }
+    </script>
+</body>
+
+</html>
