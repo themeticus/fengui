@@ -4,61 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mesh Chat</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-
-        #messages {
-            height: 300px;
-            overflow-y: scroll;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            padding: 10px;
-        }
-
-        #message {
-            width: calc(100% - 60px);
-        }
-
-        button {
-            padding: 10px;
-        }
-    </style>
+    <title>CanText Chat</title>
 </head>
 
 <body>
-    <h1>Mesh Chat</h1>
-    <div id="messages"></div>
-    <input type="text" id="message" placeholder="Type your message here...">
-    <button onclick="sendMessage()">Send</button>
+    <h1>CanText Chat</h1>
+    <div id="chat">
+        <ul id="messages"></ul>
+    </div>
+    <input id="message" type="text" placeholder="Type a message..." autofocus>
+    <button id="send">Send</button>
 
     <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
     <script>
-        // Initialize Gun.js with no peers (this will work in P2P mode)
+        // Initialize Gun
         const gun = Gun();
 
-        // Reference to the chat room in the Gun database
-        const chat = gun.get('mesh_chat');
+        // Get a reference to the DOM elements
+        const messages = document.getElementById('messages');
+        const messageInput = document.getElementById('message');
+        const sendButton = document.getElementById('send');
+
+        // Create a 'chat' node
+        const chat = gun.get('chat');
 
         // Listen for new messages
-        chat.map().on((msg) => {
-            const messagesDiv = document.getElementById('messages');
-            const newMessage = document.createElement('div');
-            newMessage.textContent = msg;
-            messagesDiv.appendChild(newMessage);
-            messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scroll to bottom
+        chat.map().on(function (data) {
+            const li = document.createElement('li');
+            li.textContent = data;
+            messages.appendChild(li);
         });
 
         // Send a message
-        function sendMessage() {
-            const messageInput = document.getElementById('message');
+        sendButton.addEventListener('click', function () {
             const message = messageInput.value;
-            chat.set(message);
-            messageInput.value = ''; // Clear input
-        }
+            if (message.trim()) {
+                chat.set(message);
+                messageInput.value = '';
+            }
+        });
+
+        // Also send on Enter key press
+        messageInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                sendButton.click();
+            }
+        });
     </script>
 </body>
 
