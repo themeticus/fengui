@@ -18,13 +18,26 @@
 
     <script>
         // Initialize Gun with the public relay peer
-        const gun = Gun(['https://relay.peer.gun.eco/gun']);
+        const gun = Gun({
+            peers: ['https://relay.peer.gun.eco/gun'],
+            localStorage: false, // Disables local storage caching
+            radisk: false, // Disables RAD storage, to avoid conflicts
+            file: false // Disable file persistence, for pure in-memory operation
+        });
+
+        // Debug connection status
+        gun.on('hi', peer => {
+            console.log('Connected to peer:', peer);
+        });
+        gun.on('bye', peer => {
+            console.log('Disconnected from peer:', peer);
+        });
 
         // Reference to a chat room
         const chat = gun.get('mesh-chat');
 
         // Display incoming messages
-        chat.map().on((message, id) => {
+        chat.map().once((message, id) => {
             const messagesDiv = document.getElementById('messages');
             const messageElement = document.createElement('div');
             messageElement.textContent = message;
@@ -36,7 +49,8 @@
             const messageInput = document.getElementById('messageInput');
             const message = messageInput.value.trim();
             if (message) {
-                chat.set(message);
+                // Add a timestamp to each message for uniqueness
+                chat.get(Date.now().toString()).put(message);
                 messageInput.value = '';
             }
         }
