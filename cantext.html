@@ -17,8 +17,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
     <script>
-        // Initialize Gun
-        const gun = Gun();
+        // Initialize Gun with a public relay peer
+        const gun = Gun({
+            peers: ['https://relay.peer.gun.eco/gun']
+        });
 
         // Get a reference to the DOM elements
         const messages = document.getElementById('messages');
