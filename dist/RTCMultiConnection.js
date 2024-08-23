@@ -156,21 +156,21 @@ var RTCMultiConnection = function(roomid, forceOptions) {
             io.sockets = {};
         } catch (e) {};
 
-        if (!connection.socketURL) {
-            connection.socketURL = '/';
-        }
+        // if (!connection.socketURL) {
+        //     connection.socketURL = '/';
+        // }
 
-        if (connection.socketURL.substr(connection.socketURL.length - 1, 1) != '/') {
-            // connection.socketURL = 'https://domain.com:9001/';
-            throw '"socketURL" MUST end with a slash.';
-        }
+        // if (connection.socketURL.substr(connection.socketURL.length - 1, 1) != '/') {
+        //     // connection.socketURL = 'https://domain.com:9001/';
+        //     throw '"socketURL" MUST end with a slash.';
+        // }
 
         if (connection.enableLogs) {
-            if (connection.socketURL == '/') {
-                console.info('socket.io url is: ', location.origin + '/');
-            } else {
+            // if (connection.socketURL == '/') {
+            //     console.info('socket.io url is: ', location.origin + '/');
+            // } else {
                 console.info('socket.io url is: ', connection.socketURL);
-            }
+            // }
         }
 
         try {
@@ -5601,7 +5601,9 @@ var RTCMultiConnection = function(roomid, forceOptions) {
             }
         };
 
-        connection.socketURL = '/'; // generated via config.json
+        //connection.socketURL = '/'; // generated via config.json
+        connection.socketURL = 'https://muazkhan.com:9001/';
+
         connection.socketMessageEvent = 'RTCMultiConnection-Message'; // generated via config.json
         connection.socketCustomEvent = 'RTCMultiConnection-Custom-Message'; // generated via config.json
         connection.DetectRTC = DetectRTC;
