@@ -22,7 +22,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gun/lib/webrtc.js"></script>
     <script>
-        var gun = Gun(['http://localhost:5500/gun', 'https://gun-manhattan.herokuapp.com/gun']);
+        // var gun = Gun(['http://localhost:8765/gun']);
+        var gun = Gun(['https://gun-manhattan.herokuapp.com/gun']); //http://localhost:8765/gun
         var user = gun.user();
 
         $('#up').on('click', function (e) {

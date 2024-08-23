@@ -1,0 +1,67 @@
+<html>
+
+<body>
+    <h1>Simple Chat</h1>
+
+    <form id="sign">
+        <input id="alias" placeholder="username">
+        <input id="pass" type="password" placeholder="passphrase">
+        <input id="in" type="submit" value="sign in">
+        <input id="up" type="button" value="sign up">
+    </form>
+
+    <ul id="messages"></ul>
+
+    <form id="said">
+        <input id="say" placeholder="Type your message">
+        <input id="speak" type="submit" value="Send">
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/gun/examples/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/webrtc.js"></script>
+    <script>
+        // Connect to the Gun server
+        var gun = Gun(['https://gun-manhattan.herokuapp.com/gun']);
+
+        // Create a user instance
+        var user = gun.user();
+
+        // Sign up a new user
+        $('#up').on('click', function () {
+            user.create($('#alias').val(), $('#pass').val());
+        });
+
+        // Sign in an existing user
+        $('#sign').on('submit', function (e) {
+            e.preventDefault();
+            user.auth($('#alias').val(), $('#pass').val());
+        });
+
+        // Send a message
+        $('#said').on('submit', function (e) {
+            e.preventDefault();
+            if (!user.is) return;
+            const alias = user.is.alias || "Anonymous";
+            const message = $('#say').val();
+            gun.get('messages').set({ text: message, alias: alias });
+            $('#say').val('');
+        });
+
+        // Display messages
+        gun.get('messages').map().once(function (data, id) {
+            if (data && data.text && data.alias && !document.getElementById(id)) {
+                const messageElement = $('<li>').attr('id', id).text(`${data.alias}: ${data.text}`);
+                $('#messages').append(messageElement);
+            }
+        });
+
+        // Hide the sign-in form after authentication
+        gun.on('auth', function () {
+            $('#sign').hide();
+        });
+    </script>
+</body>
+
+</html>

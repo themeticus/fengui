@@ -1,30 +1,90 @@
 <html>
 
 <body>
-    <input id="message" placeholder="Type your message" />
-    <button onclick="sendMessage()">Send</button>
+    <h1>Group Chat</h1>
+
+    <form id="sign">
+        <input id="alias" placeholder="username">
+        <input id="pass" type="password" placeholder="passphrase">
+        <input id="in" type="submit" value="sign in">
+        <input id="up" type="button" value="sign up">
+    </form>
+
+    <form id="room">
+        <input id="roomName" placeholder="Enter room name">
+        <input id="joinRoom" type="submit" value="Join Room">
+    </form>
+
+    <h2>Room: <span id="currentRoom">None</span></h2>
+
     <ul id="messages"></ul>
 
+    <form id="said">
+        <input id="say" placeholder="Type your message">
+        <input id="speak" type="submit" value="Send">
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/gun/examples/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gun/lib/webrtc.js"></script> -->
     <script>
-        // const gun = Gun(['https://gun.eco/gun']);
-        // const gun = Gun(['https://themeticus.github.io/fengui/'])
-        // const gun = Gun(['https://your-relay-server-url.com/gun']);
-        const gun = Gun(['http://127.0.0.1:5500/gun']);
+        var gun = Gun(['http://localhost:8765/gun']);
+        var user = gun.user();
+        var currentRoom = '';
 
-        const messages = gun.get('messages');
-
-        messages.map().on(function (data, id) {
-            const li = document.createElement('li');
-            li.textContent = data;
-            document.getElementById('messages').appendChild(li);
+        $('#up').on('click', function (e) {
+            user.create($('#alias').val(), $('#pass').val(), function (ack) {
+                if (ack.err) {
+                    console.error('Sign-up error:', ack.err);
+                } else {
+                    console.log('User created:', ack);
+                }
+            });
         });
 
-        function sendMessage() {
-            const msg = document.getElementById('message').value;
-            messages.set(msg);
-            document.getElementById('message').value = '';
+        $('#sign').on('submit', function (e) {
+            e.preventDefault();
+            user.auth($('#alias').val(), $('#pass').val(), function (ack) {
+                if (ack.err) {
+                    console.error('Authentication error:', ack.err);
+                } else {
+                    console.log('User authenticated:', ack);
+                }
+            });
+        });
+
+        $('#room').on('submit', function (e) {
+            e.preventDefault();
+            if (user.is) {
+                currentRoom = $('#roomName').val();
+                $('#currentRoom').text(currentRoom);
+                $('#said').show();
+                $('#room').hide();
+                user.get('rooms').get(currentRoom).map().on(function (data, id) {
+                    UI(data, id);
+                });
+            }
+        });
+
+        $('#said').on('submit', function (e) {
+            e.preventDefault();
+            if (user.is && currentRoom) {
+                user.get('rooms').get(currentRoom).set({ text: $('#say').val(), user: user.is.alias });
+                $('#say').val("");
+            }
+        });
+
+        function UI(message, id) {
+            var li = $('#' + id).get(0) || $('<li>').attr('id', id).appendTo('#messages');
+            $(li).text(message.text + ' (' + message.user + ')');
         }
+
+        gun.on('auth', function () {
+            $('#sign').hide();
+            $('#room').show();
+            $('#said').hide();
+        });
     </script>
 </body>
 
