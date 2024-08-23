@@ -4,54 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CanText Chat</title>
+    <title>CanText Mesh Chat</title>
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
 </head>
 
 <body>
-    <h1>CanText Chat</h1>
+    <h1>CanText Mesh Chat</h1>
     <div id="chat">
-        <ul id="messages"></ul>
+        <div id="messages"></div>
+        <input id="messageInput" type="text" placeholder="Type your message here...">
+        <button onclick="sendMessage()">Send</button>
     </div>
-    <input id="message" type="text" placeholder="Type a message..." autofocus>
-    <button id="send">Send</button>
 
-    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
     <script>
-        // Initialize Gun with a public relay peer
-        const gun = Gun({
-            peers: ['https://relay.peer.gun.eco/gun']
+        // Initialize Gun with the public relay peer
+        const gun = Gun(['https://relay.peer.gun.eco/gun']);
+
+        // Reference to a chat room
+        const chat = gun.get('mesh-chat');
+
+        // Display incoming messages
+        chat.map().on((message, id) => {
+            const messagesDiv = document.getElementById('messages');
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            messagesDiv.appendChild(messageElement);
         });
 
-        // Get a reference to the DOM elements
-        const messages = document.getElementById('messages');
-        const messageInput = document.getElementById('message');
-        const sendButton = document.getElementById('send');
-
-        // Create a 'chat' node
-        const chat = gun.get('chat');
-
-        // Listen for new messages
-        chat.map().on(function (data) {
-            const li = document.createElement('li');
-            li.textContent = data;
-            messages.appendChild(li);
-        });
-
-        // Send a message
-        sendButton.addEventListener('click', function () {
-            const message = messageInput.value;
-            if (message.trim()) {
+        // Function to send a message
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+            if (message) {
                 chat.set(message);
                 messageInput.value = '';
             }
-        });
-
-        // Also send on Enter key press
-        messageInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                sendButton.click();
-            }
-        });
+        }
     </script>
 </body>
 
