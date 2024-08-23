@@ -165,8 +165,11 @@ var RTCMultiConnection = function(roomid, forceOptions) {
             throw '"socketURL" MUST end with a slash.';
         }
 
+        // connectin.socketURL = 'https://muazkhan.com:9001/';
+        // https://github.com/muaz-khan/RTCMultiConnection-Server
+
         if (connection.enableLogs) {
-            if (connection.socketURL == '/') {
+            if (connection.socketURL !== null) {
                 console.info('socket.io url is: ', location.origin + '/');
             } else {
                 console.info('socket.io url is: ', connection.socketURL);
@@ -5601,7 +5604,8 @@ var RTCMultiConnection = function(roomid, forceOptions) {
             }
         };
 
-        connection.socketURL = '/'; // generated via config.json
+        //connection.socketURL = '/'; // generated via config.json
+        connection.socketURL = 'https://muazkhan.com:9001/';
         connection.socketMessageEvent = 'RTCMultiConnection-Message'; // generated via config.json
         connection.socketCustomEvent = 'RTCMultiConnection-Custom-Message'; // generated via config.json
         connection.DetectRTC = DetectRTC;
