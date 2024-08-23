@@ -156,9 +156,9 @@ var RTCMultiConnection = function(roomid, forceOptions) {
             io.sockets = {};
         } catch (e) {};
 
-        if (!connection.socketURL) {
-            connection.socketURL = '/';
-        }
+        // if (!connection.socketURL) {
+        //     connection.socketURL = '/';
+        // }
 
         if (connection.socketURL.substr(connection.socketURL.length - 1, 1) != '/') {
             // connection.socketURL = 'https://domain.com:9001/';
@@ -169,11 +169,11 @@ var RTCMultiConnection = function(roomid, forceOptions) {
         // https://github.com/muaz-khan/RTCMultiConnection-Server
 
         if (connection.enableLogs) {
-            // if (connection.socketURL !== null) {
-            console.info('socket.io url is: ', connection.socketURL);
-            // } else {
-                // console.info('socket.io url is: ', location.origin + '/');
-            // }
+            if (connection.socketURL !== '') {
+                console.info('socket.io url is: ', connection.socketURL);
+            } else {
+                console.info('socket.io url is: ', location.origin + '/');
+            }
         }
 
         try {
