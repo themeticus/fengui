@@ -169,11 +169,11 @@ var RTCMultiConnection = function(roomid, forceOptions) {
         // https://github.com/muaz-khan/RTCMultiConnection-Server
 
         if (connection.enableLogs) {
-            if (connection.socketURL !== null) {
-                console.info('socket.io url is: ', connection.socketURL);
-            } else {
-                console.info('socket.io url is: ', location.origin + '/');
-            }
+            // if (connection.socketURL !== null) {
+            console.info('socket.io url is: ', connection.socketURL);
+            // } else {
+                // console.info('socket.io url is: ', location.origin + '/');
+            // }
         }
 
         try {
