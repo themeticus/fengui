@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-
+    <title>File Sharing using RTCMultiConnection</title>
+    
+    <script>
+      if (!location.hash.replace('#', '').length) {
+        location.href = location.href.split('#')[0] + '#' + (Math.random() * 100).toString().replace('.', '');
+        location.reload();
+      }
+    </script>
   <meta charset="utf-8">
   <title>RTCMultiConnection Demos</title>
   <link rel="canonical" href="/fengui/demos/">
