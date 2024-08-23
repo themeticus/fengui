@@ -170,9 +170,9 @@ var RTCMultiConnection = function(roomid, forceOptions) {
 
         if (connection.enableLogs) {
             if (connection.socketURL !== null) {
-                console.info('socket.io url is: ', location.origin + '/');
-            } else {
                 console.info('socket.io url is: ', connection.socketURL);
+            } else {
+                console.info('socket.io url is: ', location.origin + '/');
             }
         }
 
